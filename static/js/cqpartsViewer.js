@@ -4,10 +4,11 @@ var container, controls , obj;
 var camera, scene, renderer, light;
 var meshlist = [];
 var raycaster ;
-var mouse = new THREE.Vector2(), INTERSECTED ; 
+var mouse = new THREE.Vector2(), INTERSECTED ;
 
 init();
 animate();
+load('./model/out.gltf');
 
 function clear(){
     scene.remove(obj);
@@ -15,7 +16,7 @@ function clear(){
 
 function load(name){
 	var loader = new THREE.GLTFLoader();
-    loader.load( 'model/'+name+'/out.gltf', function ( gltf ) {
+    loader.load( name, function ( gltf ) {
 		scene.add( gltf.scene );
         obj = gltf.scene;
 		//grab all the meshes for selection
@@ -29,12 +30,12 @@ function load(name){
     }
 
 function init() {
-	outer = document.getElementById('outer');
-	canvas = document.getElementById('viewer');
 
-	camera = new THREE.PerspectiveCamera( 30, canvas.clientWidth/ canvas.clientHeight, 0.001, 1000);
+    container = document.createElement('div');
+    document.body.appendChild(container)
+	camera = new THREE.PerspectiveCamera( 30, window.innerWidth/ window.innerHeight, 0.001, 1000);
 	camera.position.set( 0.2, 0.2, 0.2);
-	controls = new THREE.OrbitControls( camera , canvas );
+	controls = new THREE.OrbitControls(camera);
     //controls.autoRotate = true;
     controls.autoRotateSpeed = 2;
 	controls.target.set(0,0,0);
@@ -54,25 +55,31 @@ function init() {
 	light3.position.set( 0,0,-50);
 	scene.add( light2) ;
     // renderer
-	renderer = new THREE.WebGLRenderer( { canvas: canvas, antialias: true, preserveDrawingBuffer: true } );
-    canvas.width = canvas.clientWidth;
-    canvas.height = canvas.clientHeight;
+	renderer = new THREE.WebGLRenderer( {antialias: true, preserveDrawingBuffer: true } );
 	renderer.setPixelRatio( window.devicePixelRatio );
-    renderer.setViewport(0,0,canvas.clientWidth,canvas.clientHeight);
+    renderer.setSize(window.innerWidth,window.innerHeight);
 	renderer.gammaOutput = true;
     // raycaster
     raycaster = new THREE.Raycaster();
     // add to doc and bind events
-    document.addEventListener( 'resize', onWindowResize, false );
-    canvas.addEventListener('mousemove',onDocumentMouseMove,false);
-    canvas.addEventListener('mousedown',onDocumentClick,false);
-    document.addEventListener('keydown',onKey,false);
+    window.addEventListener( 'resize', onWindowResize, false );
+    window.addEventListener('mousemove',onDocumentMouseMove,false);
+    window.addEventListener('mousedown',onDocumentClick,false);
+    window.addEventListener('keydown',onKey,false);
     // Base grid helps us orient ourselves
     var baseGrid = new THREE.GridHelper(1, 10);
     //baseGrid.geometry.rotateX( Math.PI / 2 );
     scene.add(baseGrid);
-    // final resize
-    onWindowResize();
+    container.appendChild(renderer.domElement);
+}
+
+function ActivateAutorotate(){
+    but = document.getElementById("autorotate");
+    if (controls.autoRotate == true){
+        controls.autoRotate = false;
+    } else {
+        controls.autoRotate = true;
+    }
 }
 
 function onKey( event ) {
@@ -105,9 +112,9 @@ function onDocumentMouseMove( event ) {
 }
 
 function onWindowResize() {
-    camera.aspect = outer.clientWidth/outer.clientHeight;
+    camera.aspect = window.innerWidth/window.innerHeight;
     camera.updateProjectionMatrix();
-    renderer.setSize( outer.clientWidth,outer.clientHeight);
+    renderer.setSize( window.innerWidth,window.innerHeight);
 }
 
 function animate() {
@@ -124,7 +131,7 @@ function render(){
             if (INTERSECTED) INTERSECTED.material.emissive.setHex(INTERSECTED.currentHEX);
 			INTERSECTED = intersects[0].object;
 			INTERSECTED.currentHex = INTERSECTED.material.emissive.getHex();
-		    INTERSECTED.material.emissive.setHex(0x007A00);
+		    INTERSECTED.material.emissive.setHex(0x551111);
 		}
 	} else {
         if ( INTERSECTED ) INTERSECTED.material.emissive.setHex(INTERSECTED.currentHex);

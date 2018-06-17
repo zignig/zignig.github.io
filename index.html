@@ -2,56 +2,18 @@
 <html>
   <head>
     <title>CQParts display-o-tron</title>
-    <link rel="stylesheet" href="/static/css/pure-min.css">
-    <link rel="stylesheet" href="/static/css/extra.css">
-    <link rel="stylesheet" href="/vue/comp.css">
+    <link rel="stylesheet" href="/static/css/viewer.css">
     <script src="/static/js/three.min.js"></script>
     <script src="/static/js/OrbitControls.js"></script>
     <script src="/static/js/GLTFLoader.js"></script>
   </head>
-  <body>
-    <div id="main" class="pure-g">
-        <div id="nav" class="pure-u-1-5">
-            <model :model-list="modelList"></model>
-        </div>
-        <div class="pure-u-3-5">
-            <div id="outer">
-    <canvas class="threejs" id="viewer"></canvas>
-</div>
-
-        <notif :issue-item="issueItem" ></notif>
-        </div>
-    </div>
-            <a class="pure-button" id="autorotate" onclick="ActivateAutorotate()">Autorotate</a>
-
-    <template id="notif">
-    <div>
-        <div v-bind:model="issueItem">{{ issueItem }}</div>
-    </div>
-</template>
-
-<template id="App">
-    <div id="app">
-    </div>
-</template>
-
-<template id="model">
-    <div class="pure-menu">
-    <ul class="pure-menu-list">
-        <li class="pure-menu-item" v-bind:model="modelList" v-for="obj in modelList">
-            <a class="pure-menu-link" v-on:click="load(obj)">{{ obj }}</a>
-        </li>
-    </ul>
-    </div>
-</template>
-
-
-    <script src="/static/js/vue.js"></script>
-    <script src="/static/js/vuex.js"></script>
-    <script src="/vue/comp.js"></script>
-    <script src="/static/js/app.js"></script>
+  <body style="margin:0; overflow:hidden;">
+    <button id="autorotate" onclick="ActivateAutorotate()">AutoRotate</button>
     <script src="/static/js/cqpartsViewer.js"></script>
-    <script src="/static/js/saver.js"></script>
-    
+    <script>
+      camera.position.set(0.228175,0.113086,-0.24762);
+      controls.target.set(-0.008175,-0.006486,-0);
+      controls.autoRotate = false;
+    </script>
   </body>
 </html>
