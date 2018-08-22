@@ -8,7 +8,6 @@ var mouse = new THREE.Vector2(), INTERSECTED ;
 
 init();
 animate();
-load('./model/out.gltf');
 
 function clear(){
     scene.remove(obj);

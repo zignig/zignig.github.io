@@ -6,17 +6,14 @@
     <script src="/static/js/three.min.js"></script>
     <script src="/static/js/OrbitControls.js"></script>
     <script src="/static/js/GLTFLoader.js"></script>
-    <meta name="ac-discovery" content="zignig.github.io https://zignig.github.io/rkt/{name}-{version}-{os}-{arch}.{ext}">
-    <meta name="ac-discovery-pubkeys" content="zignig.github.io https://zignig.github.io/obeygiantrobot.gpg">
   </head>
   <body style="margin:0; overflow:hidden;">
-    <button id="autorotate" onclick="ActivateAutorotate()">AutoRotate</button>
     <script src="/static/js/cqpartsViewer.js"></script>
     <script>
       camera.position.set(0.228175,0.113086,-0.24762);
       controls.target.set(-0.008175,-0.006486,-0);
       controls.autoRotate = false;
-      load('./model/out.gltf');
+      load('./FlipBox/out.gltf');
     </script>
   </body>
 </html>
