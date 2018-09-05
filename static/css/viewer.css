@@ -5,3 +5,7 @@
     left: 5px;
 };
 
+floater {
+    position: absolute;
+    width: auto;
+};

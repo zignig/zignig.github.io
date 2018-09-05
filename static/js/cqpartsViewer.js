@@ -15,7 +15,7 @@ function clear(){
 
 function load(name){
 	var loader = new THREE.GLTFLoader();
-    loader.load( name, function ( gltf ) {
+	loader.load( name, function ( gltf ) {
 		scene.add( gltf.scene );
         obj = gltf.scene;
 		//grab all the meshes for selection
@@ -30,11 +30,11 @@ function load(name){
 
 function init() {
 
-    container = document.createElement('div');
+    container = document.getElementById('viewer');
     document.body.appendChild(container)
 	camera = new THREE.PerspectiveCamera( 30, window.innerWidth/ window.innerHeight, 0.001, 1000);
 	camera.position.set( 0.2, 0.2, 0.2);
-	controls = new THREE.OrbitControls(camera);
+	controls = new THREE.OrbitControls(camera,container);
     //controls.autoRotate = true;
     controls.autoRotateSpeed = 2;
 	controls.target.set(0,0,0);
@@ -62,13 +62,15 @@ function init() {
     raycaster = new THREE.Raycaster();
     // add to doc and bind events
     window.addEventListener( 'resize', onWindowResize, false );
-    window.addEventListener('mousemove',onDocumentMouseMove,false);
-    window.addEventListener('mousedown',onDocumentClick,false);
+    container.addEventListener('mousemove',onDocumentMouseMove,false);
+    container.addEventListener('mousedown',onDocumentClick,false);
     window.addEventListener('keydown',onKey,false);
     // Base grid helps us orient ourselves
     var baseGrid = new THREE.GridHelper(1, 10);
     //baseGrid.geometry.rotateX( Math.PI / 2 );
     scene.add(baseGrid);
+    var baseGridSmall = new THREE.GridHelper(0.1, 10);
+    scene.add(baseGridSmall);
     container.appendChild(renderer.domElement);
 }
 
