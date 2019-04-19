@@ -10,5 +10,14 @@
 	<atom:link href="https://zignig.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>Cqparts</title>
+      <link>https://zignig.github.io/categories/cqparts/</link>
+      <pubDate>Fri, 19 Apr 2019 08:14:03 +0800</pubDate>
+      
+      <guid>https://zignig.github.io/categories/cqparts/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
