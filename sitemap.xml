@@ -18,6 +18,10 @@
   </url>
   
   <url>
+    <loc>https://zignig.github.io/thing/showcase/</loc>
+  </url>
+  
+  <url>
     <loc>https://zignig.github.io/categories/</loc>
     <priority>0</priority>
   </url>
@@ -35,15 +39,6 @@
   </url>
   
   <url>
-    <loc>https://zignig.github.io/investigation/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://zignig.github.io/investigation/outline/</loc>
-  </url>
-  
-  <url>
     <loc>https://zignig.github.io/posts/</loc>
     <lastmod>2019-04-19T08:55:07+08:00</lastmod>
     <priority>0</priority>
@@ -51,6 +46,11 @@
   
   <url>
     <loc>https://zignig.github.io/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zignig.github.io/thing/</loc>
     <priority>0</priority>
   </url>
   
