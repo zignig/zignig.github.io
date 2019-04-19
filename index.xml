@@ -5,7 +5,7 @@
     <link>https://zignig.github.io/</link>
     <description>Recent content on Digital Meta Adventures</description>
     <generator>Hugo -- gohugo.io</generator>
-    <copyright>Copyright &amp;copy; 2019 - Zignig</copyright>
+    <language>en-US</language>
     <lastBuildDate>Fri, 19 Apr 2019 08:14:03 +0800</lastBuildDate>
     
 	<atom:link href="https://zignig.github.io/index.xml" rel="self" type="application/rss+xml" />
@@ -18,7 +18,9 @@
       
       <guid>https://zignig.github.io/posts/cqparts-work/</guid>
       <description>Build tangible programmatic designs in python.
-It is similar in form to OpenScad where you can define 3d objects with code, however it is python and brings all the power of OO to building objects.</description>
+It is similar in form to OpenScad where you can define 3d objects with code, however it is python and brings all the power of OO to building objects. You can make paramteric object that are an assembly of parts, this is one of my examples for a little project box
+It can also generate gltf format files and display them with ThreeJS
+Viewer</description>
     </item>
     
     <item>
