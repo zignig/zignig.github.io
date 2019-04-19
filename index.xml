@@ -6,10 +6,19 @@
     <description>Recent content on Digital Meta Adventures</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 19 Apr 2019 08:14:03 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 19 Apr 2019 08:55:07 +0800</lastBuildDate>
     
 	<atom:link href="https://zignig.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>FPGA</title>
+      <link>https://zignig.github.io/posts/fpga/</link>
+      <pubDate>Fri, 19 Apr 2019 08:55:07 +0800</pubDate>
+      
+      <guid>https://zignig.github.io/posts/fpga/</guid>
+      <description>FPGA fun I recently aquired a TinyFpgaBX and have been investigating programming RTL logic. After doing regular programming , thinking in gateway is a brain melter.</description>
+    </item>
     
     <item>
       <title>Cqparts work</title>
@@ -17,10 +26,8 @@
       <pubDate>Fri, 19 Apr 2019 08:14:03 +0800</pubDate>
       
       <guid>https://zignig.github.io/posts/cqparts-work/</guid>
-      <description>Build tangible programmatic designs in python.
-It is similar in form to OpenScad where you can define 3d objects with code, however it is python and brings all the power of OO to building objects. You can make paramteric object that are an assembly of parts, this is one of my examples for a little project box
-It can also generate gltf format files and display them with ThreeJS
-Viewer</description>
+      <description>Build tangible programmatic designs in python. It is similar in form to OpenScad where you can define 3d objects with code, however it is python and brings all the power of OO to building objects. You can make paramteric object that are an assembly of parts, this is one of my examples for a little project box
+It can also generate gltf format files and display them with ThreeJS</description>
     </item>
     
     <item>
