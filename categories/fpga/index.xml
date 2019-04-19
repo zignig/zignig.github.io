@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Fpga on Digital Meta Adventures</title>
+    <title>Fpga on Semidigital Meta Adventures</title>
     <link>https://zignig.github.io/categories/fpga/</link>
-    <description>Recent content in Fpga on Digital Meta Adventures</description>
+    <description>Recent content in Fpga on Semidigital Meta Adventures</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Fri, 19 Apr 2019 08:55:07 +0800</lastBuildDate>
@@ -17,7 +17,8 @@
       <pubDate>Fri, 19 Apr 2019 08:55:07 +0800</pubDate>
       
       <guid>https://zignig.github.io/posts/fpga/</guid>
-      <description>FPGA fun I recently aquired a TinyFpgaBX and have been investigating programming RTL logic. After doing regular programming , thinking in gateway is a brain melter.</description>
+      <description>FPGA fun I recently aquired a TinyFpgaBX and have been investigating programming RTL logic. After doing regular programming , thinking in gateware is a brain melter.
+TinyFPGA-BX Is a nifty little breadboard friendly board (website)</description>
     </item>
     
   </channel>
