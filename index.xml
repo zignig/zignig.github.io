@@ -29,7 +29,9 @@ It is a 16bit Von Neumann machine with a completely flat memory space , register
       <guid>https://zignig.github.io/posts/steve/</guid>
       <description>STEVE is brake steer rover.
 He is based on the Tamiya tracked chassis.
-The plan is to get the arduino to drive the H-bridges and then the main controler is going to be a TinyFPGA-BX. I have a number of sensors to attach, but first thing first.</description>
+The plan is to get the arduino to drive the H-bridges and then the main controler is going to be a TinyFPGA-BX. I have a number of sensors to attach, but first thing first.
+The code for STEVE is a available in my tinybx_stuff repository under STEVE. This will be updated as the build continues.
+Drive control The drive system is a Dual H-Bridge that uses a L298N to provide control the direction and speed of a motor for each track of the rover.</description>
     </item>
     
     <item>

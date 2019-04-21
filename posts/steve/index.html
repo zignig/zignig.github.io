@@ -125,13 +125,57 @@
                         <span class="tag"><a href="/tags/fpga">fpga</a></span>
                     
                     <hr>
-                    <p>STEVE is brake steer rover.</p>
+                    
+
+<p>STEVE is brake steer rover.</p>
 
 <p>He is based on the Tamiya tracked chassis.</p>
 
 <p><img src="/img/STEVE.jpg" alt="steve" /></p>
 
 <p>The plan is to get the arduino to drive the H-bridges and then the main controler is going to be a TinyFPGA-BX. I have a number of sensors to attach, but first thing first.</p>
+
+<p>The code for STEVE is a available in my tinybx_stuff repository under <a href="https://github.com/zignig/tinybx_stuff/tree/master/STEVE">STEVE</a>. This will be updated as the build continues.</p>
+
+<h3 id="drive-control">Drive control</h3>
+
+<p>The drive system is a <a href="https://www.jaycar.com.au/arduino-compatible-stepper-motor-controller-module/p/XC4492">Dual H-Bridge</a> that uses a L298N to provide control the direction and speed of a motor for each track of the rover.</p>
+
+<p>This is connected in turn to a Arduino pro mini running at 5V. The current program just runs a preprogrammed sequence. This control will need to be exposed as some kind of serial interface (UART/SPI). I also have a compass that will be integrated to get a bearing for rotation control.</p>
+
+<h3 id="navigaion">Navigaion</h3>
+
+<p>I have a <a href="https://www.sparkfun.com/products/retired/9956">Autopilot</a> in my stuff box and it has all the sensors for a good IMU, it also has a GPS. The integration with this device is going to be complicated but will make for much more data.</p>
+
+<h3 id="primary-control">Primary Control</h3>
+
+<p>The primary controller is going to be a <a href="/posts/fpga/">TinyFPGA-BX</a> where I can build some custom logic sytems running at hight speed. I am also considering adding in some machine learning for the overarching control.</p>
+
+<h1 id="build">Build</h1>
+
+<p>Perfboard is cool. With a drill bit side cutters and a soldering iron it is possible to build very many things. Currently the design is three levels using 3mm spacers and cap head bolts.</p>
+
+<h3 id="base">Base</h3>
+
+<p>This is tamiya drive contstruction with two drive motors and the H-Bridge controller</p>
+
+<p><img src="/img/steve_build/drive_base.jpg" alt="drive_base" /></p>
+
+<h3 id="level-1">Level 1</h3>
+
+<p>Base plaform with all the primary control signals from the H-Bridge brought up with a rainbow cable.</p>
+
+<p><img src="/img/steve_build/mid_level_bottom.jpg" alt="mid_level_bottom" /></p>
+
+<p>The signals lines for the motor controller broken out into a 10 pin IDC connector and a <em>dodgy</em> remote control when debugging the intial control.</p>
+
+<p>This is the top view of the same perfboard , it is going to have a battery holder and perhaps some more control electronics for the current sense on the motor controller.</p>
+
+<p><img src="/img/steve_build/mid_level_top.jpg" alt="mid_level_top" /></p>
+
+<p>Finall the top level , this is where all the control electronics will live. I am currently in the process of transferring the Arduino off the bread board onto the pin headers on the left</p>
+
+<p><img src="/img/steve_build/top_level_top.jpg" alt="tol_level_top" /></p>
 
                 </div>
                 <br>

@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Steve on Semidigital Meta Adventures</title>
-    <link>https://zignig.github.io/tags/steve/</link>
+    <link>https://zignig.github.io/categories/steve/</link>
     <description>Recent content in Steve on Semidigital Meta Adventures</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Fri, 19 Apr 2019 09:02:39 +0800</lastBuildDate>
     
-	<atom:link href="https://zignig.github.io/tags/steve/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://zignig.github.io/categories/steve/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
