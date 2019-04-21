@@ -18,7 +18,8 @@
       
       <guid>https://zignig.github.io/posts/steve/</guid>
       <description>STEVE is brake steer rover.
-He is based on the Tamiya tracked chassis. The plan is to get the arduino to drive the H-bridges and then the main controler is going to be a TinyFPGA-BX. I have a number of sensors to attach, but first thing first.</description>
+He is based on the Tamiya tracked chassis.
+The plan is to get the arduino to drive the H-bridges and then the main controler is going to be a TinyFPGA-BX. I have a number of sensors to attach, but first thing first.</description>
     </item>
     
     <item>
