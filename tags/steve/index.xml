@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Steve on Semidigital Meta Adventures</title>
+    <link>https://zignig.github.io/tags/steve/</link>
+    <description>Recent content in Steve on Semidigital Meta Adventures</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Fri, 19 Apr 2019 09:02:39 +0800</lastBuildDate>
+    
+	<atom:link href="https://zignig.github.io/tags/steve/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Steve</title>
+      <link>https://zignig.github.io/posts/steve/</link>
+      <pubDate>Fri, 19 Apr 2019 09:02:39 +0800</pubDate>
+      
+      <guid>https://zignig.github.io/posts/steve/</guid>
+      <description>STEVE is brake steer rover.
+He is based on the Tamiya tracked chassis. The plan is to get the arduino to drive the H-bridges and then the main controler is going to be a TinyFPGA-BX. I have a number of sensors to attach, but first thing first.</description>
+    </item>
+    
+  </channel>
+</rss>
