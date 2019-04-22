@@ -6,10 +6,32 @@
     <description>Recent content on Semidigital Meta Adventures</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 19 Apr 2019 20:07:38 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 22 Apr 2019 11:24:57 +0800</lastBuildDate>
     
 	<atom:link href="https://zignig.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Steve.2</title>
+      <link>https://zignig.github.io/posts/steve_part_2/</link>
+      <pubDate>Mon, 22 Apr 2019 11:24:57 +0800</pubDate>
+      
+      <guid>https://zignig.github.io/posts/steve_part_2/</guid>
+      <description>Neatness I have finished moving the ardino across to the perfboard , apart for an unexpected short it is working.
+Now for compass integration and rewriting the software to have much more nuanced control. I will need to break out the current probes on the motor controller to get the drive chopping properly.</description>
+    </item>
+    
+    <item>
+      <title>Steve</title>
+      <link>https://zignig.github.io/posts/steve/</link>
+      <pubDate>Mon, 22 Apr 2019 08:02:39 +0800</pubDate>
+      
+      <guid>https://zignig.github.io/posts/steve/</guid>
+      <description>&lt;p&gt;STEVE is brake steer rover.&lt;/p&gt;
+
+&lt;p&gt;It is based on the Tamiya tracked chassis.
+&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Boneless</title>
@@ -17,20 +39,11 @@
       <pubDate>Fri, 19 Apr 2019 20:07:38 +0800</pubDate>
       
       <guid>https://zignig.github.io/investigation/boneless/</guid>
-      <description>A gateware CPU The Boneless-CPU is a soft CPU written in nmigen by Whitequark.
-It is a 16bit Von Neumann machine with a completely flat memory space , registers and all. The gateware is nice and compact and fits into about 500 LUTS plus memory. This makes it perfect for control plane processor and can run up to about 50 MHz so it can run the same clock as the rest of the design.</description>
-    </item>
-    
-    <item>
-      <title>Steve</title>
-      <link>https://zignig.github.io/posts/steve/</link>
-      <pubDate>Fri, 19 Apr 2019 09:02:39 +0800</pubDate>
-      
-      <guid>https://zignig.github.io/posts/steve/</guid>
-      <description>&lt;p&gt;STEVE is brake steer rover.&lt;/p&gt;
+      <description>&lt;h2 id=&#34;a-gateware-cpu&#34;&gt;A gateware CPU&lt;/h2&gt;
 
-&lt;p&gt;It is based on the Tamiya tracked chassis.
-&lt;/p&gt;</description>
+&lt;p&gt;The &lt;a href=&#34;https://github.com/zignig/Boneless-CPU&#34;&gt;Boneless-CPU&lt;/a&gt; is a soft CPU written in &lt;a href=&#34;https://github.com/m-labs/nmigen&#34;&gt;nmigen&lt;/a&gt; by &lt;a href=&#34;https://github.com/whitequark&#34;&gt;Whitequark&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;It is a 16bit Von Neumann machine with a completely flat memory space , registers and all. The gateware is nice and compact and fits into about 500 LUTS plus memory. This makes it perfect for control plane processor and can run up to about 50 MHz so it can run the same clock as the rest of your design.&lt;/p&gt;</description>
     </item>
     
     <item>

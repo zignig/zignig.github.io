@@ -17,8 +17,11 @@
       <pubDate>Fri, 19 Apr 2019 20:07:38 +0800</pubDate>
       
       <guid>https://zignig.github.io/investigation/boneless/</guid>
-      <description>A gateware CPU The Boneless-CPU is a soft CPU written in nmigen by Whitequark.
-It is a 16bit Von Neumann machine with a completely flat memory space , registers and all. The gateware is nice and compact and fits into about 500 LUTS plus memory. This makes it perfect for control plane processor and can run up to about 50 MHz so it can run the same clock as the rest of the design.</description>
+      <description>&lt;h2 id=&#34;a-gateware-cpu&#34;&gt;A gateware CPU&lt;/h2&gt;
+
+&lt;p&gt;The &lt;a href=&#34;https://github.com/zignig/Boneless-CPU&#34;&gt;Boneless-CPU&lt;/a&gt; is a soft CPU written in &lt;a href=&#34;https://github.com/m-labs/nmigen&#34;&gt;nmigen&lt;/a&gt; by &lt;a href=&#34;https://github.com/whitequark&#34;&gt;Whitequark&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;It is a 16bit Von Neumann machine with a completely flat memory space , registers and all. The gateware is nice and compact and fits into about 500 LUTS plus memory. This makes it perfect for control plane processor and can run up to about 50 MHz so it can run the same clock as the rest of your design.&lt;/p&gt;</description>
     </item>
     
   </channel>
