@@ -33,26 +33,26 @@
   </url>
   
   <url>
-    <loc>https://zignig.github.io/categories/cqparts/</loc>
-    <lastmod>2019-04-19T08:14:03+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://zignig.github.io/tags/cqparts/</loc>
     <lastmod>2019-04-19T08:14:03+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://zignig.github.io/categories/fpga/</loc>
-    <lastmod>2019-04-19T08:55:07+08:00</lastmod>
+    <loc>https://zignig.github.io/categories/cqparts/</loc>
+    <lastmod>2019-04-19T08:14:03+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://zignig.github.io/tags/fpga/</loc>
     <lastmod>2019-04-19T20:07:38+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zignig.github.io/categories/fpga/</loc>
+    <lastmod>2019-04-19T08:55:07+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -81,13 +81,13 @@
   </url>
   
   <url>
-    <loc>https://zignig.github.io/categories/steve/</loc>
+    <loc>https://zignig.github.io/tags/steve/</loc>
     <lastmod>2019-04-19T09:02:39+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://zignig.github.io/tags/steve/</loc>
+    <loc>https://zignig.github.io/categories/steve/</loc>
     <lastmod>2019-04-19T09:02:39+08:00</lastmod>
     <priority>0</priority>
   </url>

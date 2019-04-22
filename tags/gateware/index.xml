@@ -27,10 +27,12 @@ It is a 16bit Von Neumann machine with a completely flat memory space , register
       <pubDate>Fri, 19 Apr 2019 08:55:07 +0800</pubDate>
       
       <guid>https://zignig.github.io/posts/fpga/</guid>
-      <description>FPGA fun I recently aquired a TinyFpgaBX and have been investigating programming RTL.
-After doing regular programming , thinking in gateware is a brain melter.
-TinyFPGA-BX Is a nifty little breadboard friendly board (website), this board has been designed by Luke Valenty and is a great little board to get started with FPGA programming.
-Building reconfigurable logic Historically the tooling needed to program FPGA has been vendor specific, the software has been huge, buggy, not portable and a usually windows only.</description>
+      <description>&lt;h1 id=&#34;fpga-fun&#34;&gt;FPGA fun&lt;/h1&gt;
+
+&lt;p&gt;I recently aquired a TinyFpgaBX and have been investigating programming RTL.&lt;/p&gt;
+
+&lt;p&gt;After doing regular programming , thinking in gateware is a brain melter.
+&lt;/p&gt;</description>
     </item>
     
   </channel>
