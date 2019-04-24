@@ -13,24 +13,23 @@
     
     <item>
       <title>Steve.2</title>
-      <link>https://zignig.github.io/posts/steve_part_2/</link>
+      <link>https://zignig.github.io/posts/steve/steve.2/</link>
       <pubDate>Mon, 22 Apr 2019 11:24:57 +0800</pubDate>
       
-      <guid>https://zignig.github.io/posts/steve_part_2/</guid>
+      <guid>https://zignig.github.io/posts/steve/steve.2/</guid>
       <description>Neatness I have finished moving the ardino across to the perfboard , apart for an unexpected short it is working.
-Now for compass integration and rewriting the software to have much more nuanced control. I will need to break out the current probes on the motor controller to get the drive chopping properly.</description>
+     Now for compass integration and rewriting the software to have much more nuanced control. I will need to break out the current probes on the motor controller to get the drive chopping properly.</description>
     </item>
     
     <item>
       <title>Steve</title>
-      <link>https://zignig.github.io/posts/steve/</link>
+      <link>https://zignig.github.io/posts/steve/steve.1/</link>
       <pubDate>Mon, 22 Apr 2019 08:02:39 +0800</pubDate>
       
-      <guid>https://zignig.github.io/posts/steve/</guid>
+      <guid>https://zignig.github.io/posts/steve/steve.1/</guid>
       <description>&lt;p&gt;STEVE is brake steer rover.&lt;/p&gt;
 
-&lt;p&gt;It is based on the Tamiya tracked chassis.
-&lt;/p&gt;</description>
+&lt;p&gt;It is based on the Tamiya tracked chassis.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -43,19 +42,7 @@ Now for compass integration and rewriting the software to have much more nuanced
 
 &lt;p&gt;I recently aquired a TinyFpgaBX and have been investigating programming RTL.&lt;/p&gt;
 
-&lt;p&gt;After doing regular programming , thinking in gateware is a brain melter.
-&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Cqparts work</title>
-      <link>https://zignig.github.io/posts/cqparts-work/</link>
-      <pubDate>Fri, 19 Apr 2019 08:14:03 +0800</pubDate>
-      
-      <guid>https://zignig.github.io/posts/cqparts-work/</guid>
-      <description>Build tangible programmatic designs in python. It is similar in form to OpenScad where you can define 3d objects with code, however it is python and brings all the power of OO to building objects. You can make paramteric object that are an assembly of parts, this is one of my examples for a little project box
-
-It can also generate gltf format files and display them with ThreeJS</description>
+&lt;p&gt;After doing regular programming , thinking in gateware is a brain melter.&lt;/p&gt;</description>
     </item>
     
   </channel>

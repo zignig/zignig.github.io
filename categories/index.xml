@@ -6,21 +6,31 @@
     <description>Recent content in Categories on Semidigital Meta Adventures</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
+    <lastBuildDate>Mon, 22 Apr 2019 08:02:39 +0800</lastBuildDate>
     
 	<atom:link href="https://zignig.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Cqparts</title>
-      <link>https://zignig.github.io/categories/cqparts/</link>
-      <pubDate>Fri, 19 Apr 2019 08:14:03 +0800</pubDate>
+      <title>steve</title>
+      <link>https://zignig.github.io/categories/steve/</link>
+      <pubDate>Mon, 22 Apr 2019 08:02:39 +0800</pubDate>
       
-      <guid>https://zignig.github.io/categories/cqparts/</guid>
+      <guid>https://zignig.github.io/categories/steve/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Fpga</title>
+      <title>infrastructure</title>
+      <link>https://zignig.github.io/categories/infrastructure/</link>
+      <pubDate>Sun, 21 Apr 2019 11:39:11 +0800</pubDate>
+      
+      <guid>https://zignig.github.io/categories/infrastructure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fpga</title>
       <link>https://zignig.github.io/categories/fpga/</link>
       <pubDate>Fri, 19 Apr 2019 08:55:07 +0800</pubDate>
       
@@ -29,11 +39,11 @@
     </item>
     
     <item>
-      <title>Steve</title>
-      <link>https://zignig.github.io/categories/steve/</link>
-      <pubDate>Mon, 22 Apr 2019 08:02:39 +0800</pubDate>
+      <title>cqparts</title>
+      <link>https://zignig.github.io/categories/cqparts/</link>
+      <pubDate>Fri, 19 Apr 2019 08:14:03 +0800</pubDate>
       
-      <guid>https://zignig.github.io/categories/steve/</guid>
+      <guid>https://zignig.github.io/categories/cqparts/</guid>
       <description></description>
     </item>
     

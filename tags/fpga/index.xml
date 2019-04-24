@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Fpga on Semidigital Meta Adventures</title>
+    <title>fpga on Semidigital Meta Adventures</title>
     <link>https://zignig.github.io/tags/fpga/</link>
-    <description>Recent content in Fpga on Semidigital Meta Adventures</description>
+    <description>Recent content in fpga on Semidigital Meta Adventures</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Mon, 22 Apr 2019 08:02:39 +0800</lastBuildDate>
@@ -13,14 +13,13 @@
     
     <item>
       <title>Steve</title>
-      <link>https://zignig.github.io/posts/steve/</link>
+      <link>https://zignig.github.io/posts/steve/steve.1/</link>
       <pubDate>Mon, 22 Apr 2019 08:02:39 +0800</pubDate>
       
-      <guid>https://zignig.github.io/posts/steve/</guid>
+      <guid>https://zignig.github.io/posts/steve/steve.1/</guid>
       <description>&lt;p&gt;STEVE is brake steer rover.&lt;/p&gt;
 
-&lt;p&gt;It is based on the Tamiya tracked chassis.
-&lt;/p&gt;</description>
+&lt;p&gt;It is based on the Tamiya tracked chassis.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -33,7 +32,7 @@
 
 &lt;p&gt;The &lt;a href=&#34;https://github.com/zignig/Boneless-CPU&#34;&gt;Boneless-CPU&lt;/a&gt; is a soft CPU written in &lt;a href=&#34;https://github.com/m-labs/nmigen&#34;&gt;nmigen&lt;/a&gt; by &lt;a href=&#34;https://github.com/whitequark&#34;&gt;Whitequark&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;It is a 16bit Von Neumann machine with a completely flat memory space , registers and all. The gateware is nice and compact and fits into about 500 LUTS plus memory. This makes it perfect for control plane processor and can run up to about 50 MHz so it can run the same clock as the rest of your design.&lt;/p&gt;</description>
+&lt;p&gt;It is a 16bit Von Neumann machine with a completely flat memory space , registers and all. The gateware is nice and compact and fits into about 500 LUTS plus memory.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -46,8 +45,7 @@
 
 &lt;p&gt;I recently aquired a TinyFpgaBX and have been investigating programming RTL.&lt;/p&gt;
 
-&lt;p&gt;After doing regular programming , thinking in gateware is a brain melter.
-&lt;/p&gt;</description>
+&lt;p&gt;After doing regular programming , thinking in gateware is a brain melter.&lt;/p&gt;</description>
     </item>
     
   </channel>

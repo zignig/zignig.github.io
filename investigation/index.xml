@@ -6,10 +6,20 @@
     <description>Recent content in Investigations on Semidigital Meta Adventures</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 19 Apr 2019 20:07:38 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 21 Apr 2019 11:39:11 +0800</lastBuildDate>
     
 	<atom:link href="https://zignig.github.io/investigation/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Infrastructure</title>
+      <link>https://zignig.github.io/investigation/infrastructre/</link>
+      <pubDate>Sun, 21 Apr 2019 11:39:11 +0800</pubDate>
+      
+      <guid>https://zignig.github.io/investigation/infrastructre/</guid>
+      <description> Software and services that help instead of getting in the way One of the things that crops up again and again is that computers do what you told them to, not what you meant.
+SO ANNOYING </description>
+    </item>
     
     <item>
       <title>Boneless</title>
@@ -21,7 +31,18 @@
 
 &lt;p&gt;The &lt;a href=&#34;https://github.com/zignig/Boneless-CPU&#34;&gt;Boneless-CPU&lt;/a&gt; is a soft CPU written in &lt;a href=&#34;https://github.com/m-labs/nmigen&#34;&gt;nmigen&lt;/a&gt; by &lt;a href=&#34;https://github.com/whitequark&#34;&gt;Whitequark&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;It is a 16bit Von Neumann machine with a completely flat memory space , registers and all. The gateware is nice and compact and fits into about 500 LUTS plus memory. This makes it perfect for control plane processor and can run up to about 50 MHz so it can run the same clock as the rest of your design.&lt;/p&gt;</description>
+&lt;p&gt;It is a 16bit Von Neumann machine with a completely flat memory space , registers and all. The gateware is nice and compact and fits into about 500 LUTS plus memory.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>CQparts</title>
+      <link>https://zignig.github.io/investigation/cqparts/</link>
+      <pubDate>Fri, 19 Apr 2019 08:14:03 +0800</pubDate>
+      
+      <guid>https://zignig.github.io/investigation/cqparts/</guid>
+      <description>Build tangible programmatic designs in python. It is similar in form to OpenScad where you can define 3d objects with code, however it is python and brings all the power of OO to building objects. You can make paramteric object that are an assembly of parts, this is one of my examples for a little project box
+
+It can also generate gltf format files and display them with ThreeJS</description>
     </item>
     
   </channel>

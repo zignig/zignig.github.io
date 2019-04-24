@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Steve on Semidigital Meta Adventures</title>
+    <title>steve on Semidigital Meta Adventures</title>
     <link>https://zignig.github.io/categories/steve/</link>
-    <description>Recent content in Steve on Semidigital Meta Adventures</description>
+    <description>Recent content in steve on Semidigital Meta Adventures</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Mon, 22 Apr 2019 08:02:39 +0800</lastBuildDate>
@@ -13,14 +13,13 @@
     
     <item>
       <title>Steve</title>
-      <link>https://zignig.github.io/posts/steve/</link>
+      <link>https://zignig.github.io/posts/steve/steve.1/</link>
       <pubDate>Mon, 22 Apr 2019 08:02:39 +0800</pubDate>
       
-      <guid>https://zignig.github.io/posts/steve/</guid>
+      <guid>https://zignig.github.io/posts/steve/steve.1/</guid>
       <description>&lt;p&gt;STEVE is brake steer rover.&lt;/p&gt;
 
-&lt;p&gt;It is based on the Tamiya tracked chassis.
-&lt;/p&gt;</description>
+&lt;p&gt;It is based on the Tamiya tracked chassis.&lt;/p&gt;</description>
     </item>
     
   </channel>
