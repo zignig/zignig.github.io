@@ -6,10 +6,21 @@
     <description>Recent content in Posts on Semidigital Meta Adventures</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 22 Apr 2019 11:24:57 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 24 Apr 2019 06:48:22 +0800</lastBuildDate>
     
 	<atom:link href="https://zignig.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Steve3</title>
+      <link>https://zignig.github.io/posts/steve/steve.3/</link>
+      <pubDate>Wed, 24 Apr 2019 06:48:22 +0800</pubDate>
+      
+      <guid>https://zignig.github.io/posts/steve/steve.3/</guid>
+      <description>Motor Controller I have moved the arduino for motor control onto the perfboard and cleaned up the wiring.
+The battery pack needs some attention , 4 AAs providing 6V is workable for testing. However going forward it will need to be rechargeable (with the possiblility of steve recharging himself)
+The compass (digital) HMC6352 Having an absolute (within reason) bearing makes navigation significantly easier. When you command the bot to rotate 90 degrees you can actually measure it.</description>
+    </item>
     
     <item>
       <title>Steve.2</title>
