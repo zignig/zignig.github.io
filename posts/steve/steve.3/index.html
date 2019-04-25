@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Steve3 | Semidigital Meta Adventures</title>
+    <title>Steve part 3 | Semidigital Meta Adventures</title>
 
     
     <meta name="description" content="Making space for more electronics">  
@@ -20,7 +20,7 @@
   <meta name="author" content="">
 
  
-    <meta property="og:title" content="Steve3" />
+    <meta property="og:title" content="Steve part 3" />
 <meta property="og:description" content="Making space for more electronics" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://zignig.github.io/posts/steve/steve.3/" />
@@ -103,7 +103,7 @@
         <section class="hero is-default is-bold">
             <div class="hero-body">
                 <div class="content container">
-                    <div class="is-size-1" >Steve3</div>
+                    <div class="is-size-1" >Steve part 3</div>
 		    Making space for more electronics
                     <div class="is-size-7">Apr 2019</div>
                     <div class="tags is-right">
@@ -114,12 +114,6 @@
 
                     <hr>
                     
-
-<h1 id="motor-controller">Motor Controller</h1>
-
-<p>I have moved the arduino for motor control onto the perfboard and cleaned up the wiring.</p>
-
-<p>The battery pack needs some attention , 4 AAs providing 6V is workable for testing. However going forward it will need to be rechargeable (with the possiblility of steve recharging himself)</p>
 
 <h3 id="the-compass-digital-hmc6352">The compass (digital) HMC6352</h3>
 
@@ -135,6 +129,12 @@
 </span >
 
 
+<h1 id="motor-controller">Motor Controller</h1>
+
+<p>I have moved the arduino for motor control onto the perfboard and cleaned up the wiring.</p>
+
+<p>The battery pack needs some attention , 4 AAs providing 6V is workable for testing. However going forward it will need to be rechargeable (with the possiblility of steve recharging himself)</p>
+
 <p>STEVE is looking neater and I have broken out six more pins up to the top level so I can experiment with the current sensing on the H-BRIDGE controller.</p>
 
 
@@ -147,12 +147,24 @@
 </span >
 
 
-<p>Thinking about differential control and navigation.</p>
+<h1 id="differential-control-and-navigation">Differential control and navigation.</h1>
+
+<p>The outputs on the H-bridge are two speeds (8bits) and direction (1 bit each). The inputs will be compass heading and current used on each channel. It would also be an advantage to be able to measure the motor rotation, however on a brake steer platform the rotation compared to posistion will vary considerably. A photo interrupter or hall effect sensors to measure. I will have to manage the available ports on the Arduino carefully.</p>
+
+<p>The external interface to the drive system will have three variables.</p>
+
+<ul>
+<li>Direction ( absolute magentic bearing ), measured by the compass.</li>
+<li>Speed, this will need to be ramped up and down to limit the current draw.</li>
+<li>Distance, measured from the motor rotation.</li>
+</ul>
+
+<p>All three of the values should be piped through a PID controller of some kind to smooth and provide a closed loop. As the battery runs down the speed posted compared to the actual speed varies wildly.</p>
 
                 <hr>
                 <div class="level">
                     <div class="level-left">
-                     <a href="https://zignig.github.io/posts/steve/steve.2/">Steve.2 </a> 
+                     <a href="https://zignig.github.io/posts/steve/steve.2/">Steve part 2 </a> 
                     </div>
                     <div class="level-right">
                     

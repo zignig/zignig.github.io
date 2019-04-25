@@ -12,18 +12,18 @@
     
     
     <item>
-      <title>Steve3</title>
+      <title>Steve part 3</title>
       <link>https://zignig.github.io/posts/steve/steve.3/</link>
       <pubDate>Wed, 24 Apr 2019 06:48:22 +0800</pubDate>
       
       <guid>https://zignig.github.io/posts/steve/steve.3/</guid>
-      <description>Motor Controller I have moved the arduino for motor control onto the perfboard and cleaned up the wiring.
-The battery pack needs some attention , 4 AAs providing 6V is workable for testing. However going forward it will need to be rechargeable (with the possiblility of steve recharging himself)
-The compass (digital) HMC6352 Having an absolute (within reason) bearing makes navigation significantly easier. When you command the bot to rotate 90 degrees you can actually measure it.</description>
+      <description>The compass (digital) HMC6352 Having an absolute (within reason) bearing makes navigation significantly easier. When you command the bot to rotate 90 degrees you can actually measure it. This is a spark fun module, retired. The datasheet is here
+  Motor Controller I have moved the arduino for motor control onto the perfboard and cleaned up the wiring.
+The battery pack needs some attention , 4 AAs providing 6V is workable for testing.</description>
     </item>
     
     <item>
-      <title>Steve.2</title>
+      <title>Steve part 2</title>
       <link>https://zignig.github.io/posts/steve/steve.2/</link>
       <pubDate>Mon, 22 Apr 2019 11:24:57 +0800</pubDate>
       
