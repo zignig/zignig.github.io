@@ -48,12 +48,6 @@
   </url>
   
   <url>
-    <loc>https://zignig.github.io/tags/fpga/</loc>
-    <lastmod>2019-04-22T08:02:39+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://zignig.github.io/categories/steve/</loc>
     <lastmod>2019-04-22T08:02:39+08:00</lastmod>
     <priority>0</priority>
@@ -97,6 +91,12 @@
   <url>
     <loc>https://zignig.github.io/investigation/boneless/</loc>
     <lastmod>2019-04-19T20:07:38+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zignig.github.io/tags/fpga/</loc>
+    <lastmod>2019-04-19T20:07:38+08:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>

@@ -21,15 +21,6 @@
     </item>
     
     <item>
-      <title>fpga</title>
-      <link>https://zignig.github.io/tags/fpga/</link>
-      <pubDate>Mon, 22 Apr 2019 08:02:39 +0800</pubDate>
-      
-      <guid>https://zignig.github.io/tags/fpga/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>golang</title>
       <link>https://zignig.github.io/tags/golang/</link>
       <pubDate>Sun, 21 Apr 2019 11:39:11 +0800</pubDate>
@@ -53,6 +44,15 @@
       <pubDate>Sun, 21 Apr 2019 11:39:11 +0800</pubDate>
       
       <guid>https://zignig.github.io/tags/software/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fpga</title>
+      <link>https://zignig.github.io/tags/fpga/</link>
+      <pubDate>Fri, 19 Apr 2019 20:07:38 +0800</pubDate>
+      
+      <guid>https://zignig.github.io/tags/fpga/</guid>
       <description></description>
     </item>
     

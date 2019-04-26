@@ -29,7 +29,7 @@
       
       <guid>https://zignig.github.io/posts/steve/steve.2/</guid>
       <description>Neatness I have finished moving the ardino across to the perfboard , apart for an unexpected short it is working.
-     Now for compass integration and rewriting the software to have much more nuanced control. I will need to break out the current probes on the motor controller to get the drive chopping properly.</description>
+       Now for compass integration and rewriting the software to have much more nuanced control. I will need to break out the current probes on the motor controller to get the drive chopping properly.</description>
     </item>
     
     <item>
