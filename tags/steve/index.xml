@@ -17,9 +17,9 @@
       <pubDate>Wed, 24 Apr 2019 06:48:22 +0800</pubDate>
       
       <guid>https://zignig.github.io/posts/steve/steve.3/</guid>
-      <description>The compass (digital) HMC6352 Having an absolute (within reason) bearing makes navigation significantly easier. When you command the bot to rotate 90 degrees you can actually measure it. This is a spark fun module, retired. The datasheet is here
-  Motor Controller I have moved the arduino for motor control onto the perfboard and cleaned up the wiring.
-The battery pack needs some attention , 4 AAs providing 6V is workable for testing.</description>
+      <description>&lt;h3 id=&#34;the-compass-digital-hmc6352&#34;&gt;The compass (digital) HMC6352&lt;/h3&gt;
+
+&lt;p&gt;Finding a path forward.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -33,7 +33,7 @@ The battery pack needs some attention , 4 AAs providing 6V is workable for testi
     </item>
     
     <item>
-      <title>Steve</title>
+      <title>Steve part 1</title>
       <link>https://zignig.github.io/posts/steve/steve.1/</link>
       <pubDate>Mon, 22 Apr 2019 08:02:39 +0800</pubDate>
       
