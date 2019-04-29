@@ -189,6 +189,16 @@
 </ul>
 
 <p>All three of the values should be piped through a PID controller of some kind to smooth and provide a closed loop. As the battery runs down the speed posted compared to the actual speed varies wildly.</p>
+
+<h2 id="arduino-pro-mini">Arduino Pro Mini</h2>
+
+<p>Pinout image</p>
+
+<p><img src="ProMini8MHzv1.jpg" alt="nano layout" /></p>
+
+<p>I moved the enable pin for the left drive from pin 10 to pin 3 so SS is freed up. The intent is to have the ProMini as an SPI slave from the TinyBX.</p>
+
+<p>The compass still works I found an example sketch for the internet, <a href="https://github.com/zignig/tinybx_stuff/blob/master/STEVE/drive/compass/compass.ino">code</a>. When I was testing I was getting weird readings as I was rotating the bot. It turned out that there was a stack of Rare Earth magnets in my bits draw right behind it (whoops).</p>
                 <hr>
                 <div class="level">
     <div class="level-left">
@@ -207,7 +217,7 @@
         </section>
     </div>
 </div>
-            
+
 
 </main>
     <footer> 
