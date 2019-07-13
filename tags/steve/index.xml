@@ -6,10 +6,19 @@
     <description>Recent content in steve on Semidigital Meta Adventures</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 04 Jun 2019 20:36:15 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 13 Jul 2019 08:08:35 +0800</lastBuildDate>
     
 	<atom:link href="https://zignig.github.io/tags/steve/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Getting gateware going</title>
+      <link>https://zignig.github.io/posts/steve/steve.6/</link>
+      <pubDate>Sat, 13 Jul 2019 08:08:35 +0800</pubDate>
+      
+      <guid>https://zignig.github.io/posts/steve/steve.6/</guid>
+      <description>&lt;p&gt;Finally managed to get TX working on the gateware uart, RX is next. Having a UART means that it can talk to the outside world.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Steve part 5</title>

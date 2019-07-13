@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html class="" lang="en-US">
+
+<head>
+    <meta name="generator" content="Hugo 0.55.3" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Getting gateware going | Semidigital Meta Adventures</title>
+
+     
+      
+    
+    
+    
+    
+     
+    
+    
+    <link rel="canonical" href="https://zignig.github.io/posts/steve/steve.6/">   
+
+    <link rel="stylesheet" href="/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    
+    <link rel="stylesheet" href="https://jenil.github.io/bulmaswatch/flatly/bulmaswatch.min.css"> 
+    <link rel="stylesheet" href="/css/landing.css">   
+    
+    
+</head>
+
+
+<body>
+    <header> <nav class="navbar is-transparent">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+        <p class="title">Zignig</p>
+    </a>
+    <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  
+  <div class="navbar-menu">
+    <div class="navbar-start">
+      
+      <a class="navbar-item" target="blank" href="https://github.com/zignig">
+        <span class="icon">
+          <i class="fa fa-github"></i>
+        </span>
+      </a>
+      
+    </div>
+    
+    
+    
+    <span class="navbar-burger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </span>
+    
+    
+    
+    <div class="navbar-end">
+      <div class="navbar-item">
+        
+        
+          <a itemprop="url" class="navbar-item " href="/investigation/"><span itemprop="name">Investigations</span></a>
+        
+          <a itemprop="url" class="navbar-item  is-active" href="/posts/"><span itemprop="name">Posts</span></a>
+        
+      </div> 
+    </div>
+  </div>
+</nav>
+ </header>
+    <main>
+
+<div class="columns is-fullheight">
+    <div class="column">
+        <section class="hero is-default is-bold">
+            <div class="hero-body">
+                <div class="content container">
+                    <div class="is-size-1" >Getting gateware going</div>
+		    
+                    <div class="is-size-7">Jul 2019</div>
+                    <div class="tags is-right">
+
+    <span class="tag is-white"><a href="/tags/steve">steve</a></span>
+
+    <span class="tag is-white"><a href="/tags/fpga">fpga</a></span>
+
+</div>
+
+                    <div class="level">
+    <div class="level-left">
+         
+        <span class="icon"><i class="mdi mdi-24px mdi-chevron-left"></i></span>
+        <a href="https://zignig.github.io/posts/steve/steve.5/">Steve part 5 </a>
+        
+    </div>
+    <div class="level-right">
+        
+    </div>
+</div>
+
+                    <hr>
+                    <p>Finally managed to get TX working on the gateware uart, RX is next. Having a UART means that it can talk to the outside world.</p>
+
+<p>Once I have RX working, the following tasks will need to be built.</p>
+
+<ul>
+<li>Echo Program , make sure char in and char out works</li>
+<li>Scratch Pad , collect char into a ram buffer for parsing</li>
+<li>Monitor, <em>This</em> is basis for the whole system , loading and executing a new program without rebuilding the gateware.</li>
+<li>FORTH , yes build a forth in assembly.</li>
+</ul>
+
+<h1 id="aaaaaand-boneless-v3-has-started-to-drop">Aaaaaand , Boneless_v3 has started to drop.</h1>
+
+<p><a href="https://twitter.com/whitequark">Whitequark</a> has been committing to <a href="https://github.com/whitequark/Boneless-CPU">Boneless-CPU</a>. It&rsquo;s an ongoing process as Ve details the individual instructions.
+The design is a much better instruction set with extended version of all the instructions.</p>
+
+<p>Now I have to rewrite all my ASM code so far. Part of the adventure I suspect. Currently (20190713) working on getting v3 into gateware will know later today if it works.</p>
+                <div class="is-clearfix"></div>
+                <hr>
+                <div class="level">
+    <div class="level-left">
+         
+        <span class="icon"><i class="mdi mdi-24px mdi-chevron-left"></i></span>
+        <a href="https://zignig.github.io/posts/steve/steve.5/">Steve part 5 </a>
+        
+    </div>
+    <div class="level-right">
+        
+    </div>
+</div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+</main>
+    <footer> 
+  <footer class="footer">
+        <div class="content has-text-centered">
+                
+                Additional power is provided by
+                  <strong>caffine</strong>.
+                
+        </div>
+</footer>
+ 
+</footer>
+
+    <script async type="text/javascript" src="/js/bulma.js"></script>
+    <script async type="text/javascript"  src="/js/clipboard.min.js"></script>
+    <script async type="text/javascript"  src="/js/clip.js"></script>
+</body>
+
+</html>
