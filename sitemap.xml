@@ -4,7 +4,30 @@
   
   <url>
     <loc>https://zignig.github.io/</loc>
-    <lastmod>2019-07-13T08:08:35+08:00</lastmod>
+    <lastmod>2019-07-15T10:47:52+09:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zignig.github.io/drawing/dino/</loc>
+    <lastmod>2019-07-15T10:47:52+09:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zignig.github.io/drawing/</loc>
+    <lastmod>2019-07-15T10:47:52+09:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zignig.github.io/tags/</loc>
+    <lastmod>2019-07-15T10:47:52+09:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zignig.github.io/tags/art/</loc>
+    <lastmod>2019-07-15T10:47:52+09:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -15,12 +38,6 @@
   
   <url>
     <loc>https://zignig.github.io/posts/</loc>
-    <lastmod>2019-07-13T08:08:35+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://zignig.github.io/tags/</loc>
     <lastmod>2019-07-13T08:08:35+08:00</lastmod>
     <priority>0</priority>
   </url>

@@ -6,10 +6,20 @@
     <description>Recent content on Semidigital Meta Adventures</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 13 Jul 2019 08:08:35 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 15 Jul 2019 10:47:52 +0930</lastBuildDate>
     
 	<atom:link href="https://zignig.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Alien Space Dino</title>
+      <link>https://zignig.github.io/drawing/dino/</link>
+      <pubDate>Mon, 15 Jul 2019 10:47:52 +0930</pubDate>
+      
+      <guid>https://zignig.github.io/drawing/dino/</guid>
+      <description>An alien space dino    orginal image  Twisty and Chonky Crayon on Cartridge , A3.
+SGK20190713</description>
+    </item>
     
     <item>
       <title>Getting gateware going</title>
