@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>drawing on Semidigital Meta Adventures</title>
+    <link>https://zignig.github.io/categories/drawing/</link>
+    <description>Recent content in drawing on Semidigital Meta Adventures</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Wed, 24 Jul 2019 15:39:46 +0930</lastBuildDate>
+    
+	<atom:link href="https://zignig.github.io/categories/drawing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Feline OverDomesticus</title>
+      <link>https://zignig.github.io/drawing/cat/</link>
+      <pubDate>Wed, 24 Jul 2019 15:39:46 +0930</pubDate>
+      
+      <guid>https://zignig.github.io/drawing/cat/</guid>
+      <description>    orginal image  </description>
+    </item>
+    
+  </channel>
+</rss>
