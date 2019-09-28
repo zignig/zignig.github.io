@@ -94,6 +94,38 @@
 <div class="box">
     <div class="level">
             <div class="level-left">
+                <a class="title is-3" href="https://zignig.github.io/posts/steve/steve.7/">New Boneless-v3 and the Gizmotron </a>
+            </div>
+            <div class="level-right">        
+            <div class="is-size-7">Aug 03 2019</div>
+            </div>
+    </div>
+    Working Boneless-v3
+    <div class="level">
+        <div class="level-left"> <div class="tags is-right">
+
+    <span class="tag is-tiny is-white"><a href="/tags/gateware">gateware</a></span>
+
+    <span class="tag is-tiny is-white"><a href="/tags/gizmotron">gizmotron</a></span>
+
+</div>
+ </div>
+    </div>
+    <div class="level">
+        
+
+    </div>
+    Working Boneless v3 Finally managed to get the new version of the processor running on my TinyBx this is in concert with nmigen , nmigen-boards and nmigen-boards. I have wrapped all this into my workbench for the project in Gizmotron
+Gizmos from .gizmo import Gizmo, IO from nmigen import * class _warmboot(Elaboratable): def __init__(self): self.image = Signal(2) self.boot = Signal() def elaborate(self, platform): m = Module() m.submodules.wb = Instance(&#34;SB_WARMBOOT&#34;, i_S1 = self.
+    <div class="level">
+        <a href="https://zignig.github.io/posts/steve/steve.7/">Continue reading...</a>
+        
+    </div>
+</div>
+
+<div class="box">
+    <div class="level">
+            <div class="level-left">
                 <a class="title is-3" href="https://zignig.github.io/drawing/cat/">Feline OverDomesticus </a>
             </div>
             <div class="level-right">        
@@ -435,41 +467,6 @@ SO ANNOYING
     </div>
 </div>
 
-<div class="box">
-    <div class="level">
-            <div class="level-left">
-                <a class="title is-3" href="https://zignig.github.io/investigation/boneless/">Boneless </a>
-            </div>
-            <div class="level-right">        
-            <div class="is-size-7">Apr 19 2019</div>
-            </div>
-    </div>
-    A CPU written in python for FPGA
-    <div class="level">
-        <div class="level-left"> <div class="tags is-right">
-
-    <span class="tag is-tiny is-white"><a href="/tags/fpga">fpga</a></span>
-
-    <span class="tag is-tiny is-white"><a href="/tags/gateware">gateware</a></span>
-
-</div>
- </div>
-    </div>
-    <div class="level">
-        
-
-    </div>
-    <h2 id="a-gateware-cpu">A gateware CPU</h2>
-
-<p>The <a href="https://github.com/zignig/Boneless-CPU">Boneless-CPU</a> is a soft CPU written in <a href="https://github.com/m-labs/nmigen">nmigen</a> by <a href="https://github.com/whitequark">Whitequark</a>.</p>
-
-<p>It is a 16bit Von Neumann machine with a completely flat memory space , registers and all. The gateware is nice and compact and fits into about 500 LUTS plus memory.</p>
-    <div class="level">
-        <a href="https://zignig.github.io/investigation/boneless/">Continue reading...</a>
-        
-    </div>
-</div>
-
 
             </div>
             <div class="column is-one-fifth">
@@ -513,6 +510,11 @@ SO ANNOYING
 
 <div class="title is-6">POSTS</a></div>
 <ul>
+    
+    <li>
+    <a href="https://zignig.github.io/posts/steve/steve.7/">New Boneless-v3 and the Gizmotron</a>
+    <br>
+    </li>
     
     <li>
     <a href="https://zignig.github.io/posts/steve/steve.6/">Getting gateware going</a>
@@ -589,7 +591,7 @@ SO ANNOYING
     <span class="tag"> 
     <a href="/tags/gateware">gateware</a>
     </span>
-    <span class="tag is-info">2</span>
+    <span class="tag is-info">3</span>
 </div>
 </div>
 
@@ -598,7 +600,7 @@ SO ANNOYING
     <span class="tag"> 
     <a href="/tags/gizmotron">gizmotron</a>
     </span>
-    <span class="tag is-info">1</span>
+    <span class="tag is-info">2</span>
 </div>
 </div>
 

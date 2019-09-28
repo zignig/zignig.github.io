@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html class="" lang="en-US">
+
+<head>
+    <meta name="generator" content="Hugo 0.55.3" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>New Boneless-v3 and the Gizmotron | Semidigital Meta Adventures</title>
+
+    
+    <meta name="description" content="Working Boneless-v3">  
+      
+    
+    
+    
+    
+     
+    
+    
+    <link rel="canonical" href="https://zignig.github.io/posts/steve/steve.7/">   
+
+    <link rel="stylesheet" href="/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    
+    <link rel="stylesheet" href="/css/bulma.css"> 
+    <link rel="stylesheet" href="/css/landing.css">   
+    
+    
+</head>
+
+
+<body>
+    <header> <nav class="navbar is-transparent">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+        <p class="title">Zignig</p>
+    </a>
+    <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  
+  <div class="navbar-menu">
+    <div class="navbar-start">
+      
+      <a class="navbar-item" target="blank" href="https://github.com/zignig">
+        <span class="icon">
+          <i class="fa fa-github"></i>
+        </span>
+      </a>
+      
+    </div>
+    
+    
+    
+    <span class="navbar-burger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </span>
+    
+    
+    
+    <div class="navbar-end">
+      <div class="navbar-item">
+        
+        
+          <a itemprop="url" class="navbar-item " href="/drawing/"><span itemprop="name">Drawings</span></a>
+        
+          <a itemprop="url" class="navbar-item " href="/investigation/"><span itemprop="name">Investigations</span></a>
+        
+          <a itemprop="url" class="navbar-item  is-active" href="/posts/"><span itemprop="name">Posts</span></a>
+        
+      </div> 
+    </div>
+  </div>
+</nav>
+ </header>
+    <main>
+
+<div class="columns is-fullheight">
+    <div class="column">
+        <section class="hero is-default is-bold">
+            <div class="hero-body">
+                <div class="content container">
+                    <div class="is-size-1" >New Boneless-v3 and the Gizmotron</div>
+		    <b>Working Boneless-v3</b>
+                    <br><br>
+                    <div class="is-size-7">Aug 2019</div>
+                    <div class="tags is-right">
+
+    <span class="tag is-tiny is-white"><a href="/tags/gateware">gateware</a></span>
+
+    <span class="tag is-tiny is-white"><a href="/tags/gizmotron">gizmotron</a></span>
+
+</div>
+
+                    <div class="level">
+    <div class="level-left">
+         
+        <span class="icon"><i class="mdi mdi-24px mdi-chevron-left"></i></span>
+        <a href="https://zignig.github.io/posts/steve/steve.6/">Feline OverDomesticus </a>
+        
+    </div>
+    <div class="level-right">
+        
+    </div>
+</div>
+
+                    <hr>
+                    
+
+<h1 id="working-boneless-v3">Working Boneless v3</h1>
+
+<p>Finally managed to get the new version of the processor running on my <a href="https://tinyfpga.com">TinyBx</a> this is in concert with <a href="https://github.com/m-labs/nmigen">nmigen</a> , <a href="https://github.com/m-labs/nmigen-boards">nmigen-boards</a> and <a href="https://github.com/WhiteQuark/Boneless-CPU">nmigen-boards</a>. I have wrapped all this into my workbench for the project in <a href="https://github.com/zignig/gizmotron">Gizmotron</a></p>
+
+<h1 id="gizmos">Gizmos</h1>
+
+<div class="highlight"><pre class="chroma"><code class="language-py3" data-lang="py3"><span class="kn">from</span> <span class="nn">.gizmo</span> <span class="k">import</span> <span class="n">Gizmo</span><span class="p">,</span> <span class="n">IO</span>
+<span class="kn">from</span> <span class="nn">nmigen</span> <span class="k">import</span> <span class="o">*</span>
+
+
+<span class="k">class</span> <span class="nc">_warmboot</span><span class="p">(</span><span class="n">Elaboratable</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="n">Signal</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">boot</span> <span class="o">=</span> <span class="n">Signal</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">elaborate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">platform</span><span class="p">):</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="n">Module</span><span class="p">()</span>
+        <span class="n">m</span><span class="o">.</span><span class="n">submodules</span><span class="o">.</span><span class="n">wb</span> <span class="o">=</span> <span class="n">Instance</span><span class="p">(</span><span class="s2">&#34;SB_WARMBOOT&#34;</span><span class="p">,</span>
+                <span class="n">i_S1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">image</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                <span class="n">i_S0</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">image</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+                <span class="n">i_BOOT</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">boot</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">m</span>
+
+
+<span class="k">class</span> <span class="nc">WarmBoot</span><span class="p">(</span><span class="n">Gizmo</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">build</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">w</span> <span class="o">=</span> <span class="n">_warmboot</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_device</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="n">IO</span><span class="p">(</span><span class="n">sig_out</span><span class="o">=</span><span class="n">w</span><span class="o">.</span><span class="n">image</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&#34;image&#34;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_reg</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">IO</span><span class="p">(</span><span class="n">sig_out</span><span class="o">=</span><span class="n">w</span><span class="o">.</span><span class="n">boot</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&#34;boot&#34;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_reg</span><span class="p">(</span><span class="n">s</span><span class="p">)</span></code></pre></div>
+
+<p>This then can be used from inside the processor</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-asm" data-lang="asm"><span class="nl">warmboot:</span>
+    <span class="nf">MOVI</span> <span class="no">R0</span><span class="p">,</span><span class="mi">0</span>                   <span class="c">; set boot image to 0
+</span><span class="c"></span>    <span class="no">STXA</span> <span class="no">R0</span><span class="p">,</span><span class="no">image</span>               <span class="c">; write to the image external register
+</span><span class="c"></span>    <span class="no">MOVI</span> <span class="no">R0</span><span class="p">,</span><span class="mi">1</span>                   <span class="c">; write one into register
+</span><span class="c"></span>    <span class="no">STXA</span> <span class="no">R0</span><span class="p">,</span><span class="no">boot</span>                <span class="err">;</span> <span class="no">reboot</span> <span class="no">the</span> <span class="no">FPGA</span> <span class="no">into</span> <span class="no">the</span> <span class="no">boot</span> <span class="no">loader</span></code></pre></div>
+
+                <div class="is-clearfix"></div>
+                <hr>
+                <div class="level">
+    <div class="level-left">
+         
+        <span class="icon"><i class="mdi mdi-24px mdi-chevron-left"></i></span>
+        <a href="https://zignig.github.io/posts/steve/steve.6/">Feline OverDomesticus </a>
+        
+    </div>
+    <div class="level-right">
+        
+    </div>
+</div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+</main>
+    <footer> 
+  <footer class="footer">
+        <div class="content has-text-centered">
+                <a href="https://github.com/zignig">GITHUB</a>
+                <br>
+                
+                Additional power is provided by
+                  <strong>caffine</strong>.
+                
+                
+        </div>
+</footer>
+ 
+</footer>
+
+    <script async type="text/javascript" src="/js/bulma.js"></script>
+    <script async type="text/javascript"  src="/js/clipboard.min.js"></script>
+    <script async type="text/javascript"  src="/js/clip.js"></script>
+</body>
+
+</html>
