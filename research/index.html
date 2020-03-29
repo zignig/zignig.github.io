@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CQParts Case</title>
+		<link rel="stylesheet" href="static/css/bulma.css">
+		<link rel="stylesheet" href="static/css/viewer.css">
+		<script src="static/js/three.min.js"></script>
+		<script src="static/js/OrbitControls.js"></script>
+		<script src="static/js/GLTFLoader.js"></script>
+	</head>
+	<body style="margin:0; overflow:hidden;">
+		<div id="viewer"></div>
+		<script src="static/js/cqpartsViewer.js"></script>
+		<script src="static/js/app.js"></script>
+		<script>
+			load('cube.gltf');
+                        camera.position.set(0.0635346,0.13265,0.087066);
+                        controls.target.set(0,0.0125,0.0104);
+		</script>
+	</body>
+</html>
