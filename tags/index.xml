@@ -6,10 +6,19 @@
     <description>Recent content in Tags on Semidigital Meta Adventures</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 03 Aug 2019 08:46:36 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 12 May 2020 11:41:00 +0800</lastBuildDate>
     
 	<atom:link href="https://zignig.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>photos</title>
+      <link>https://zignig.github.io/tags/photos/</link>
+      <pubDate>Tue, 12 May 2020 11:41:00 +0800</pubDate>
+      
+      <guid>https://zignig.github.io/tags/photos/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>gateware</title>
