@@ -9,6 +9,12 @@
   </url>
   
   <url>
+    <loc>https://zignig.github.io/categories/</loc>
+    <lastmod>2020-05-12T11:41:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://zignig.github.io/posts/</loc>
     <lastmod>2020-05-12T11:41:00+08:00</lastmod>
     <priority>0</priority>
@@ -26,6 +32,12 @@
   </url>
   
   <url>
+    <loc>https://zignig.github.io/categories/photos/</loc>
+    <lastmod>2020-05-12T11:41:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://zignig.github.io/tags/photos/</loc>
     <lastmod>2020-05-12T11:41:00+08:00</lastmod>
     <priority>0</priority>
@@ -34,12 +46,6 @@
   <url>
     <loc>https://zignig.github.io/posts/info/absent/</loc>
     <lastmod>2020-03-15T13:13:50+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zignig.github.io/categories/</loc>
-    <lastmod>2019-08-03T08:46:36+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>

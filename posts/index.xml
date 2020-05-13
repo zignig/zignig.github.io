@@ -57,7 +57,7 @@ Gizmos from .gizmo import Gizmo, IO from nmigen import * class _warmboot(Elabora
       <guid>https://zignig.github.io/posts/steve/steve.5/</guid>
       <description>&lt;h1 id=&#34;mmmm-brains&#34;&gt;mmmm BRAINS&lt;/h1&gt;
 
-&lt;p&gt;Now that I have the TinyBX mounted and connected the time has come to get some gateware going. After some research I settled on &lt;a href=&#34;https://github.com/m-labs/nmigen&#34;&gt;nMigen&lt;/a&gt;. It is constant development and &lt;a href=&#34;https://m-labs.hk&#34;&gt;m-labs&lt;/a&gt; is working hard to get it running. There is a repository of my &lt;a href=&#34;https:/github.com/zignig/gizmotron&#34;&gt;code&lt;/a&gt; as I develop it.&lt;/p&gt;</description>
+&lt;p&gt;Now that I have the TinyBX mounted and connected the time has come to get some gateware going. After some research I settled on &lt;a href=&#34;https://github.com/nmigen/nmigen&#34;&gt;nMigen&lt;/a&gt;. It is constant development and &lt;a href=&#34;https://m-labs.hk&#34;&gt;m-labs&lt;/a&gt; is working hard to get it running. There is a repository of my &lt;a href=&#34;https:/github.com/zignig/gizmotron&#34;&gt;code&lt;/a&gt; as I develop it.&lt;/p&gt;</description>
     </item>
     
     <item>
