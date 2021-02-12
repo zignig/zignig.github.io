@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html class="" lang="en-US">
+
+<head>
+    <meta name="generator" content="Hugo 0.55.3" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SPORK! | Semidigital Meta Adventures</title>
+
+    
+    <meta name="description" content="Boneless SOC builder for nmigen">  
+      
+    
+    
+    
+    
+     
+    
+    
+    <link rel="canonical" href="https://zignig.github.io/posts/spork/">   
+
+    <link rel="stylesheet" href="/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    
+    <link rel="stylesheet" href="/css/bulma.css"> 
+    <link rel="stylesheet" href="/css/landing.css">   
+    
+    
+    <script src="/js/skins/default.js" type="text/javascript"></script>
+    <script src="/js/wavedrom.min.js" type="text/javascript"></script>
+</head>
+
+
+<body onload="WaveDrom.ProcessAll()">
+    <header> <nav class="navbar is-transparent">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+        <p class="title">Zignig</p>
+    </a>
+    <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  
+  <div class="navbar-menu">
+    <div class="navbar-start">
+      
+      <a class="navbar-item" target="blank" href="https://github.com/zignig">
+        <span class="icon">
+          <i class="fa fa-github"></i>
+        </span>
+      </a>
+      
+    </div>
+    
+    
+    
+    <span class="navbar-burger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </span>
+    
+    
+    
+    <div class="navbar-end">
+      <div class="navbar-item">
+        
+        
+          <a itemprop="url" class="navbar-item " href="/drawing/"><span itemprop="name">Drawings</span></a>
+        
+          <a itemprop="url" class="navbar-item " href="/investigation/"><span itemprop="name">Investigations</span></a>
+        
+          <a itemprop="url" class="navbar-item  is-active" href="/posts/"><span itemprop="name">Posts</span></a>
+        
+      </div> 
+    </div>
+  </div>
+</nav>
+ </header>
+    <main>
+
+<div class="columns is-fullheight">
+    <div class="column">
+        <section class="hero is-default is-bold">
+            <div class="hero-body">
+                <div class="content container">
+                    <div class="is-size-1" >SPORK!</div>
+		    <b>Boneless SOC builder for nmigen</b>
+                    <br><br>
+                    <div class="is-size-7">Feb 2021</div>
+                    <div class="tags is-right">
+
+</div>
+
+                    <div class="level">
+    <div class="level-left">
+         
+        <span class="icon"><i class="mdi mdi-24px mdi-chevron-left"></i></span>
+        <a href="https://zignig.github.io/posts/powerlines/">Powerlines </a>
+        
+    </div>
+    <div class="level-right">
+        
+    </div>
+</div>
+
+                    <hr>
+                    <h1 id="build-a-boneless-soc">Build a Boneless SOC</h1>
+
+<p>System On a Chip builder, available <a href="https://github.com/zignig/spork">here</a></p>
+
+<p>The systems is based on <a href="https://github.com/nmigen">nmigen</a>, a python suite to build RTL logic from python. It uses the <a href="https://github.com/whitequark/Boneless-CPU">Boneless-CPU</a> as the primary CPU.</p>
+
+<h1 id="phy">PHY</h1>
+
+<p>Currently a <a href="https://tinybx.com">TinyBX</a> with an FTDI and some leds, should be portable to any <a href="https://github.com/nmigen/nmigen-boards">nmigen-board</a>.</p>
+
+<h1 id="soc">SOC</h1>
+
+<p>The System On a Chip includes the processor, peripherals and interconnect.</p>
+
+<h2 id="memory-layout">Memory Layout</h2>
+
+<p>The working memory layout is as follows, it&rsquo;s fairly standard. As always you have to make sure that the heap and the stack do not collide</p>
+
+
+<br><br>
+<img src=/posts/spork/memlayout.svg></img>
+<br><br>
+
+
+<p>After reading copious amounts of compiler literature on the net and waiting for the knowledge to boil down. Endevoring to <strong>not</strong> make C compiler was important, So wrapping python classes around known constructs and formulating larger programs was <strong>the</strong> <strong>way</strong>. So, strictly it <strong>is</strong> a compiler , but everything is written in Boneless-v3 assembly lists wrapped in python classes. The manual is <a href="./manual.pdf">here</a>.</p>
+
+<p>Classes are broken down as follows.</p>
+
+<h2 id="firmware">Firmware</h2>
+
+<p><a href="https://github.com/zignig/spork/blob/master/spork/firmware/firmware.py#L16">Firmware</a> is a wrapper for a complete program. It adds base features and variables to the following classes and has some metaclasses with flag testing to only add the strings, subroutines and variables that are actually used.</p>
+
+<p>An example firmware is built like this:</p>
+
+<p>it needs <strong>setup</strong> , <strong>prelude</strong> and <strong>instr</strong> that returns a list of ASM.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-py3" data-lang="py3"><span class="k">class</span> <span class="nc">MyThing</span><span class="p">(</span><span class="n">Firmware</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># request some named registers in the starting window</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">w</span><span class="o">.</span><span class="n">req</span><span class="p">([</span><span class="s2">&#34;counter&#34;</span><span class="p">,</span><span class="s2">&#34;stuff&#34;</span><span class="p">,</span><span class="s2">&#34;test&#34;</span><span class="p">,</span><span class="s2">&#34;narg&#34;</span><span class="p">])</span>
+
+    <span class="k">def</span> <span class="nf">prelude</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># this code is in the main after init and before the main loop</span>
+        <span class="k">return</span> <span class="p">[]</span>
+
+    <span class="k">def</span> <span class="nf">instr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">[</span><span class="s2">&#34;SOME&#34;</span><span class="p">,</span><span class="s2">&#34;ASSEMBLY&#34;</span><span class="p">,</span><span class="s2">&#34;CODE&#34;</span><span class="p">,</span><span class="s2">&#34;IN&#34;</span><span class="p">,</span><span class="s2">&#34;A&#34;</span><span class="p">,</span><span class="s2">&#34;LOOP&#34;</span><span class="p">]</span>
+ </code></pre></div>
+
+<p>Simple Example firmware: <a href="https://github.com/zignig/spork/blob/master/char_dump.py">Dump all readable chars and blink</a></p>
+
+<h3 id="window">Window</h3>
+
+<p>The Window in the <a href="https://github.com/whitequark/Boneless-CPU">Boneless-CPU</a> is a weird beasty, it is a CPU register that points to a set of 8 linear word registers. You can put it anywhere in RAM, just make sure that you align it MOD 8. In the runtime presented here, the register window has a standard format. Two of the registers are reserved for top level references and the remaining <strong>SIX</strong> are used for storage and calling.
+
+<br><br>
+<img src=/posts/spork/window.svg></img>
+<br><br>
+</p>
+
+<p>You can do ALU functions on any of the registers in the window. Having a set of 8 registers <em>anywhere</em> make it cool and weird at the same time.</p>
+
+<h3 id="subr">SubR</h3>
+
+<p>The <a href="https://github.com/zignig/spork/blob/master/spork/firmware/base.py#L351">SubR</a> is a class for making subroutines. It embraces the window as part of the calling structure and attempts to be overly clever with python metaclasses. The upshot is that you create an instace of the subroutine and when you call it is marked as used and gets  added to the firmware.</p>
+
+<p>And example of a SubR</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-py3" data-lang="py3"><span class="k">class</span> <span class="nc">Wait</span><span class="p">(</span><span class="n">SubR</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">params</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;value&#34;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="nb">locals</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;counter&#34;</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">instr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">w</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">w</span>
+        <span class="n">ll</span> <span class="o">=</span> <span class="n">LocalLabels</span><span class="p">()</span>
+        <span class="k">return</span> <span class="p">[</span>
+            <span class="n">MOVI</span><span class="p">(</span><span class="n">w</span><span class="o">.</span><span class="n">counter</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span>
+            <span class="n">ll</span><span class="p">(</span><span class="s1">&#39;again&#39;</span><span class="p">),</span>
+            
+        <span class="p">]</span></code></pre></div>
+
+<h3 id="external-registers">External Registers</h3>
+
+<h3 id="globals">Globals</h3>
+
+<h3 id="stringer">Stringer</h3>
+
+<h2 id="some-scaffolding">Some Scaffolding</h2>
+                <div class="is-clearfix"></div>
+                <hr>
+                <div class="level">
+    <div class="level-left">
+         
+        <span class="icon"><i class="mdi mdi-24px mdi-chevron-left"></i></span>
+        <a href="https://zignig.github.io/posts/powerlines/">Powerlines </a>
+        
+    </div>
+    <div class="level-right">
+        
+    </div>
+</div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+</main>
+    <footer> 
+  <footer class="footer">
+        <div class="content has-text-centered">
+                <a href="https://github.com/zignig">GITHUB</a>
+                <br>
+                
+                Additional power is provided by
+                  <strong>caffine</strong>.
+                
+                
+        </div>
+</footer>
+ 
+</footer>
+
+    <script async type="text/javascript" src="/js/bulma.js"></script>
+    <script async type="text/javascript"  src="/js/clipboard.min.js"></script>
+    <script async type="text/javascript"  src="/js/clip.js"></script>
+</body>
+
+</html>

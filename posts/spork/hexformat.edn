@@ -1,0 +1,5 @@
+(draw-column-headers)
+(draw-box "Size" {:fill "#00AA00" :span 2})
+(draw-gap "Payload")
+(draw-box "Checksum" {:fill "#00AA00":span 2})
+(draw-bottom)
