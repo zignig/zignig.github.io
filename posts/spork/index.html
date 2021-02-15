@@ -115,9 +115,9 @@
 
 <p>The systems is based on <a href="https://github.com/nmigen">nmigen</a>, a python suite to build RTL logic from python. It uses the <a href="https://github.com/whitequark/Boneless-CPU">Boneless-CPU</a> as the primary CPU.</p>
 
-<h1 id="phy">PHY</h1>
+<h1 id="fpga-board">FPGA Board</h1>
 
-<p>Currently a <a href="https://tinybx.com">TinyBX</a> with an FTDI and some leds, should be portable to any <a href="https://github.com/nmigen/nmigen-boards">nmigen-board</a>.</p>
+<p>Currently a <a href="https://tinyfpga.com/">TinyBX</a> with an FTDI and some leds, should be portable to any <a href="https://github.com/nmigen/nmigen-boards">nmigen-board</a>.</p>
 
 <h1 id="soc">SOC</h1>
 
@@ -186,12 +186,64 @@
         <span class="n">w</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">w</span>
         <span class="n">ll</span> <span class="o">=</span> <span class="n">LocalLabels</span><span class="p">()</span>
         <span class="k">return</span> <span class="p">[</span>
-            <span class="n">MOVI</span><span class="p">(</span><span class="n">w</span><span class="o">.</span><span class="n">counter</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span>
-            <span class="n">ll</span><span class="p">(</span><span class="s1">&#39;again&#39;</span><span class="p">),</span>
-            
+            <span class="n">MOV</span><span class="p">(</span><span class="n">w</span><span class="o">.</span><span class="n">counter</span><span class="p">,</span><span class="n">w</span><span class="o">.</span><span class="n">value</span><span class="p">),</span>
+            <span class="n">ll</span><span class="p">(</span><span class="s2">&#34;wait&#34;</span><span class="p">),</span>
+            <span class="n">SUBI</span><span class="p">(</span><span class="n">w</span><span class="o">.</span><span class="n">counter</span><span class="p">,</span> <span class="n">w</span><span class="o">.</span><span class="n">counter</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+            <span class="n">CMPI</span><span class="p">(</span><span class="n">w</span><span class="o">.</span><span class="n">counter</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+            <span class="n">BNE</span><span class="p">(</span><span class="n">ll</span><span class="o">.</span><span class="n">wait</span><span class="p">),</span>
         <span class="p">]</span></code></pre></div>
 
+<p>To use this subroutine you have create an instance of the class and then call it in your code
+<div class="highlight"><pre class="chroma"><code class="language-py3" data-lang="py3"><span class="n">waitr</span> <span class="o">=</span> <span class="n">Wait</span><span class="p">()</span>
+
+<span class="c1"># then by calling it the asm is returned</span>
+
+<span class="n">instr</span> <span class="o">=</span> <span class="n">waitr</span><span class="p">()</span></code></pre></div></p>
+
 <h3 id="external-registers">External Registers</h3>
+
+<p>Attached to the cpu is a <a href="https://github.com/zignig/spork/blob/master/spork/cores/periph/bus.py#L47">PeripheralCollection</a>, this adds CSR peripherals to the cpu and creates a register map that can be used within python as named attributes. Most of this code has been stolen from <a href="https://github.com/lambdaconcept/lambdasoc">nmigen-soc</a> with the Wishbone ripped out. It is a little bloaty with the muxing on the inside but you can add a peripheral and it will autoname and attach to the CSR bus.</p>
+
+<p>From <a href="https://github.com/zignig/spork/blob/master/fwtest.py#L43">fwtest</a>
+<div class="highlight"><pre class="chroma"><code class="language-py3" data-lang="py3">        <span class="c1"># Make the peripheral</span>
+        <span class="n">serial</span> <span class="o">=</span> <span class="n">AsyncSerialPeripheral</span><span class="p">(</span><span class="n">pins</span><span class="o">=</span><span class="n">uart</span><span class="p">,</span> <span class="n">divisor</span><span class="o">=</span><span class="n">uart_divisor</span><span class="p">)</span>
+        <span class="c1"># Attach it to the CPU</span>
+        <span class="n">cpu</span><span class="o">.</span><span class="n">add_peripheral</span><span class="p">(</span><span class="n">serial</span><span class="p">)</span>
+
+        <span class="c1"># A countdown timer with interrupt</span>
+        <span class="n">timer</span> <span class="o">=</span> <span class="n">TimerPeripheral</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span>
+        <span class="n">cpu</span><span class="o">.</span><span class="n">add_peripheral</span><span class="p">(</span><span class="n">timer</span><span class="p">)</span></code></pre></div></p>
+
+<p>this will create a heirachy of names that can be references in code.</p>
+
+<h2 id="uart">UART</h2>
+
+<ul>
+<li>reg.serial.divisor 0</li>
+<li>reg.serial.rx.data 1</li>
+<li>reg.serial.rx.rdy 2</li>
+<li>reg.serial.rx.err 3</li>
+<li>reg.serial.tx.data 4</li>
+<li>reg.serial.tx.rdy 5</li>
+<li>reg.serial.ev.status 8</li>
+<li>reg.serial.ev.pending 9</li>
+<li>reg.serial.ev.enable 10</li>
+</ul>
+
+<h2 id="timer">Timer</h2>
+
+<ul>
+<li>reg.timer.reload_0 16</li>
+<li>reg.timer.reload_1 17</li>
+<li>reg.timer.en 18</li>
+<li>reg.timer.ctr_0 19</li>
+<li>reg.timer.ctr_1 20</li>
+<li>reg.timer.ev.status 24</li>
+<li>reg.timer.ev.pending 25</li>
+<li>reg.timer.ev.enable 26</li>
+</ul>
+
+<p>the numbering is dynamic, so by using the name it will reference the correct CSR.</p>
 
 <h3 id="globals">Globals</h3>
 
