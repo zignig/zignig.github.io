@@ -6,7 +6,7 @@
     <description>Recent content in Posts on Semidigital Meta Adventures</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 09 Feb 2021 09:06:47 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 06 Mar 2021 07:06:47 +0800</lastBuildDate>
     
 	<atom:link href="https://zignig.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,10 +14,12 @@
     <item>
       <title>SPORK!</title>
       <link>https://zignig.github.io/posts/spork/</link>
-      <pubDate>Tue, 09 Feb 2021 09:06:47 +0800</pubDate>
+      <pubDate>Sat, 06 Mar 2021 07:06:47 +0800</pubDate>
       
       <guid>https://zignig.github.io/posts/spork/</guid>
-      <description>&lt;h1 id=&#34;build-a-boneless-soc&#34;&gt;Build a Boneless SOC&lt;/h1&gt;</description>
+      <description>&lt;h1 id=&#34;build-a-boneless-soc&#34;&gt;Build a Boneless SOC&lt;/h1&gt;
+
+&lt;p&gt;A little cpu and the things that you need on a FPGA&lt;/p&gt;</description>
     </item>
     
     <item>

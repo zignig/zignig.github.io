@@ -91,7 +91,7 @@
                     <div class="is-size-1" >SPORK!</div>
 		    <b>Boneless SOC builder for nmigen</b>
                     <br><br>
-                    <div class="is-size-7">Feb 2021</div>
+                    <div class="is-size-7">Mar 2021</div>
                     <div class="tags is-right">
 
 </div>
@@ -111,6 +111,8 @@
                     <hr>
                     <h1 id="build-a-boneless-soc">Build a Boneless SOC</h1>
 
+<p>A little cpu and the things that you need on a FPGA</p>
+
 <p>System On a Chip builder, available <a href="https://github.com/zignig/spork">here</a></p>
 
 <p>The systems is based on <a href="https://github.com/nmigen">nmigen</a>, a python suite to build RTL logic from python. It uses the <a href="https://github.com/whitequark/Boneless-CPU">Boneless-CPU</a> as the primary CPU.</p>
@@ -125,7 +127,7 @@
 
 <h2 id="memory-layout">Memory Layout</h2>
 
-<p>The working memory layout is as follows, it&rsquo;s fairly standard. As always you have to make sure that the heap and the stack do not collide</p>
+<p>The working memory layout is as follows, it&rsquo;s fairly standard. As always you have to make sure that the heap and the stack does not collide</p>
 
 
 <br><br>
@@ -198,11 +200,13 @@
 
 <span class="c1"># then by calling it the asm is returned</span>
 
-<span class="n">instr</span> <span class="o">=</span> <span class="n">waitr</span><span class="p">()</span></code></pre></div></p>
+<span class="n">instr</span> <span class="o">=</span> <span class="n">waitr</span><span class="p">(</span><span class="n">R0</span><span class="p">)</span></code></pre></div></p>
+
+<p>The trick that happens here is that if it gets called the SubR is marked and included in the firmware.</p>
 
 <h3 id="external-registers">External Registers</h3>
 
-<p>Attached to the cpu is a <a href="https://github.com/zignig/spork/blob/master/spork/cores/periph/bus.py#L47">PeripheralCollection</a>, this adds CSR peripherals to the cpu and creates a register map that can be used within python as named attributes. Most of this code has been stolen from <a href="https://github.com/lambdaconcept/lambdasoc">nmigen-soc</a> with the Wishbone ripped out. It is a little bloaty with the muxing on the inside but you can add a peripheral and it will autoname and attach to the CSR bus.</p>
+<p>Attached to the cpu is a <a href="https://github.com/zignig/spork/blob/master/spork/cores/periph/bus.py#L47">PeripheralCollection</a>, this adds CSR peripherals to the cpu and creates a register map that can be used within python as named attributes. Most of this code has been stolen from <a href="https://github.com/lambdaconcept/lambdasoc">lamda-soc</a> with the Wishbone ripped out. It is a little bloaty with the muxing on the inside but you can add a peripheral and it will autoname and attach to the CSR bus.</p>
 
 <p>From <a href="https://github.com/zignig/spork/blob/master/fwtest.py#L43">fwtest</a>
 <div class="highlight"><pre class="chroma"><code class="language-py3" data-lang="py3">        <span class="c1"># Make the peripheral</span>
@@ -214,7 +218,7 @@
         <span class="n">timer</span> <span class="o">=</span> <span class="n">TimerPeripheral</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span>
         <span class="n">cpu</span><span class="o">.</span><span class="n">add_peripheral</span><span class="p">(</span><span class="n">timer</span><span class="p">)</span></code></pre></div></p>
 
-<p>this will create a heirachy of names that can be references in code.</p>
+<p>This will create a heirachy of names that can be referenced in code.</p>
 
 <h2 id="uart">UART</h2>
 
@@ -243,13 +247,43 @@
 <li>reg.timer.ev.enable 26</li>
 </ul>
 
-<p>the numbering is dynamic, so by using the name it will reference the correct CSR.</p>
+<p>The numbering is dynamic, so by using the name it will reference the correct CSR. This python object is attched to firmwares , subroutines , inlines and data objects, so you can refer to peripheral addresses even if they change. The interface needs some work so relative addressing works as well.</p>
 
 <h3 id="globals">Globals</h3>
 
+<p>Global variables are another one of the shared types that gets attached when you build the firmware ,  they are named registers that get a fixed allocation when the Firmware is built.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-py3" data-lang="py3"></code></pre></div>
+
 <h3 id="stringer">Stringer</h3>
 
+<p>The stringer is another construct that is attached Firmware,SubR,Inline and data objects , they are byte encoded (16BIT!!!) and the references are absolute memory. you can declare other stringers they just get another id.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-py3" data-lang="py3"></code></pre></div>
+
+<p>Strings are all built but <em>only</em> included in the firmware if they are called.</p>
+
 <h2 id="some-scaffolding">Some Scaffolding</h2>
+
+<h3 id="it-s-all-a-bit-messy">It&rsquo;s all a bit messy</h3>
+
+<p>So far I have built some infrastructure around WQ&rsquo;s most Awesome processor, most of the code has been stolen, liberated or cutpasta. I have managed to get a fantasy processor running on an FPGA. To get it up and running there was some infrastructre that was needed.</p>
+
+<h3 id="hexloader">Hexloader</h3>
+
+<p>The <a href="https://github.com/zignig/spork/blob/master/hexloader.py">hexloader</a>  is a program burnt into the FPGA image that allows new programs to be uploaded. It waits for chars from the serial port in the form of 0000-FFFF , takes length,data,checksum and boots into the new program.</p>
+
+
+<br><br>
+<img src=/posts/spork/hexformat.svg></img>
+<br><br>
+
+
+<p>If the is any error in the data it prints a &ldquo;!&rdquo; and &ldquo;F&rdquo; for a checksum fail, otherwise it just boots into the loaded program</p>
+
+<h3 id="library">Library</h3>
+
+<p>There is some functions already defined as <a href="https://github.com/zignig/spork/blob/master/spork/firmware/base.py#L351">SubR</a> it&rsquo;s a bit haphazard but there are a number of usefull constructs.</p>
                 <div class="is-clearfix"></div>
                 <hr>
                 <div class="level">
