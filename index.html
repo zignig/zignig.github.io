@@ -96,15 +96,23 @@
 <div class="box">
     <div class="level">
             <div class="level-left">
-                <a class="title is-3" href="https://zignig.github.io/posts/">Posts </a>
+                <a class="title is-3" href="https://zignig.github.io/posts/steve/steve.8/">Steve part 8 </a>
             </div>
             <div class="level-right">        
             <div class="is-size-7">Dec 18 2022</div>
             </div>
     </div>
-    
+    Resurrection of STEVE, tank bot rises again.
     <div class="level">
         <div class="level-left"> <div class="tags is-right">
+
+    <span class="tag is-tiny is-white"><a href="/tags/steve">steve</a></span>
+
+    <span class="tag is-tiny is-white"><a href="/tags/esp32">esp32</a></span>
+
+    <span class="tag is-tiny is-white"><a href="/tags/rust">rust</a></span>
+
+    <span class="tag is-tiny is-white"><a href="/tags/micropython">micropython</a></span>
 
 </div>
  </div>
@@ -113,9 +121,10 @@
         
 
     </div>
-    
+    The Resurrection of Steve Steve has been collecting dust for some time in my workshop. Over the last year I have replaced the TinyBX controller with an esp32 and replaced the level converter with a simpler stable level converter.
+I have been spending some of my shed time fixing TODO and making sure that there is progression across all systems. I managed to finally get feature parity on the rust firmware last night (20221218) and impressed the kids by driving it around with the web interface on my mobile phone.
     <div class="level">
-        <a href="https://zignig.github.io/posts/">Continue reading...</a>
+        <a href="https://zignig.github.io/posts/steve/steve.8/">Continue reading...</a>
         
     </div>
 </div>
@@ -123,13 +132,13 @@
 <div class="box">
     <div class="level">
             <div class="level-left">
-                <a class="title is-3" href="https://zignig.github.io/drawing/">Drawings </a>
+                <a class="title is-3" href="https://zignig.github.io/posts/spork/">SPORK! </a>
             </div>
             <div class="level-right">        
-            <div class="is-size-7">Jul 24 2019</div>
+            <div class="is-size-7">Mar 06 2021</div>
             </div>
     </div>
-    
+    Boneless SOC builder for nmigen
     <div class="level">
         <div class="level-left"> <div class="tags is-right">
 
@@ -140,9 +149,10 @@
         
 
     </div>
-    
+    <h1 id="build-a-boneless-soc">Build a Boneless SOC</h1>
+<p>A little cpu and the things that you need on a FPGA</p>
     <div class="level">
-        <a href="https://zignig.github.io/drawing/">Continue reading...</a>
+        <a href="https://zignig.github.io/posts/spork/">Continue reading...</a>
         
     </div>
 </div>
@@ -150,10 +160,49 @@
 <div class="box">
     <div class="level">
             <div class="level-left">
-                <a class="title is-3" href="https://zignig.github.io/investigation/">Investigations </a>
+                <a class="title is-3" href="https://zignig.github.io/posts/powerlines/">Powerlines </a>
             </div>
             <div class="level-right">        
-            <div class="is-size-7">Apr 21 2019</div>
+            <div class="is-size-7">May 12 2020</div>
+            </div>
+    </div>
+    Some photos of HV powerlines down the road
+    <div class="level">
+        <div class="level-left"> <div class="tags is-right">
+
+    <span class="tag is-tiny is-white"><a href="/tags/photos">photos</a></span>
+
+</div>
+ </div>
+    </div>
+    <div class="level">
+        
+            
+            
+                     
+                    <div class="">
+                    <a class="" href="https://zignig.github.io/posts/powerlines/">
+                    <img class="image " src="/posts/powerlines/20200511_123437_hu8355873c62cbf9496fe2e3576d931c20_3059280_500x0_resize_q90_box.jpg"></img> 
+                    </a>
+                    </div>
+            
+
+
+    </div>
+    <p>Some power lines</p>
+    <div class="level">
+        <a href="https://zignig.github.io/posts/powerlines/">Continue reading...</a>
+        
+    </div>
+</div>
+
+<div class="box">
+    <div class="level">
+            <div class="level-left">
+                <a class="title is-3" href="https://zignig.github.io/posts/info/absent/">Absent </a>
+            </div>
+            <div class="level-right">        
+            <div class="is-size-7">Mar 15 2020</div>
             </div>
     </div>
     
@@ -167,9 +216,42 @@
         
 
     </div>
-    
+    This blog has been sorely negelected. My intent over next few decades is to catch up on my progress.
+;)
     <div class="level">
-        <a href="https://zignig.github.io/investigation/">Continue reading...</a>
+        <a href="https://zignig.github.io/posts/info/absent/">Continue reading...</a>
+        
+    </div>
+</div>
+
+<div class="box">
+    <div class="level">
+            <div class="level-left">
+                <a class="title is-3" href="https://zignig.github.io/posts/steve/steve.7/">New Boneless-v3 and the Gizmotron </a>
+            </div>
+            <div class="level-right">        
+            <div class="is-size-7">Aug 03 2019</div>
+            </div>
+    </div>
+    Working Boneless-v3
+    <div class="level">
+        <div class="level-left"> <div class="tags is-right">
+
+    <span class="tag is-tiny is-white"><a href="/tags/gateware">gateware</a></span>
+
+    <span class="tag is-tiny is-white"><a href="/tags/gizmotron">gizmotron</a></span>
+
+</div>
+ </div>
+    </div>
+    <div class="level">
+        
+
+    </div>
+    Working Boneless v3 Finally managed to get the new version of the processor running on my TinyBx this is in concert with nmigen , nmigen-boards and Boneless v3. I have wrapped all this into my workbench for the project in Gizmotron
+Gizmos from .gizmo import Gizmo, IO from nmigen import * class _warmboot(Elaboratable): def __init__(self): self.image = Signal(2) self.boot = Signal() def elaborate(self, platform): m = Module() m.submodules.wb = Instance(&#34;SB_WARMBOOT&#34;, i_S1 = self.
+    <div class="level">
+        <a href="https://zignig.github.io/posts/steve/steve.7/">Continue reading...</a>
         
     </div>
 </div>
