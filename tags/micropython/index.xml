@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>micropython on Semidigital Meta Adventures</title>
+    <link>https://zignig.github.io/tags/micropython/</link>
+    <description>Recent content in micropython on Semidigital Meta Adventures</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sun, 18 Dec 2022 09:08:35 +0800</lastBuildDate>
+    
+	<atom:link href="https://zignig.github.io/tags/micropython/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Steve part 8</title>
+      <link>https://zignig.github.io/posts/steve/steve.8/</link>
+      <pubDate>Sun, 18 Dec 2022 09:08:35 +0800</pubDate>
+      
+      <guid>https://zignig.github.io/posts/steve/steve.8/</guid>
+      <description>The Resurrection of Steve Steve has been collecting dust for some time in my workshop. Over the last year I have replaced the TinyBX controller with an esp32 and replaced the level converter with a simpler stable level converter.
+I have been spending some of my shed time fixing TODO and making sure that there is progression across all systems. I managed to finally get feature parity on the rust firmware last night (20221218) and impressed the kids by driving it around with the web interface on my mobile phone.</description>
+    </item>
+    
+  </channel>
+</rss>
