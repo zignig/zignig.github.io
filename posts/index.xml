@@ -12,16 +12,6 @@
     
     
     <item>
-      <title>Steve part 8</title>
-      <link>https://zignig.github.io/posts/steve/steve.8/</link>
-      <pubDate>Sun, 18 Dec 2022 09:08:35 +0800</pubDate>
-      
-      <guid>https://zignig.github.io/posts/steve/steve.8/</guid>
-      <description>The Resurrection of Steve Steve has been collecting dust for some time in my workshop. Over the last year I have replaced the TinyBX controller with an esp32 and replaced the level converter with a simpler stable level converter.
-I have been spending some of my shed time fixing TODO and making sure that there is progression across all systems. I managed to finally get feature parity on the rust firmware last night (20221218) and impressed the kids by driving it around with the web interface on my mobile phone.</description>
-    </item>
-    
-    <item>
       <title>SPORK!</title>
       <link>https://zignig.github.io/posts/spork/</link>
       <pubDate>Sat, 06 Mar 2021 07:06:47 +0800</pubDate>
@@ -48,76 +38,6 @@ I have been spending some of my shed time fixing TODO and making sure that there
       <guid>https://zignig.github.io/posts/info/absent/</guid>
       <description>This blog has been sorely negelected. My intent over next few decades is to catch up on my progress.
 ;)</description>
-    </item>
-    
-    <item>
-      <title>New Boneless-v3 and the Gizmotron</title>
-      <link>https://zignig.github.io/posts/steve/steve.7/</link>
-      <pubDate>Sat, 03 Aug 2019 08:46:36 +0800</pubDate>
-      
-      <guid>https://zignig.github.io/posts/steve/steve.7/</guid>
-      <description>Working Boneless v3 Finally managed to get the new version of the processor running on my TinyBx this is in concert with nmigen , nmigen-boards and Boneless v3. I have wrapped all this into my workbench for the project in Gizmotron
-Gizmos from .gizmo import Gizmo, IO from nmigen import * class _warmboot(Elaboratable): def __init__(self): self.image = Signal(2) self.boot = Signal() def elaborate(self, platform): m = Module() m.submodules.wb = Instance(&amp;#34;SB_WARMBOOT&amp;#34;, i_S1 = self.</description>
-    </item>
-    
-    <item>
-      <title>Getting gateware going</title>
-      <link>https://zignig.github.io/posts/steve/steve.6/</link>
-      <pubDate>Sat, 13 Jul 2019 08:08:35 +0800</pubDate>
-      
-      <guid>https://zignig.github.io/posts/steve/steve.6/</guid>
-      <description>&lt;p&gt;Finally managed to get TX working on the gateware uart, RX is next. Having a UART means that it can talk to the outside world.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Steve part 5</title>
-      <link>https://zignig.github.io/posts/steve/steve.5/</link>
-      <pubDate>Tue, 04 Jun 2019 20:36:15 +0800</pubDate>
-      
-      <guid>https://zignig.github.io/posts/steve/steve.5/</guid>
-      <description>&lt;h1 id=&#34;mmmm-brains&#34;&gt;mmmm BRAINS&lt;/h1&gt;
-&lt;p&gt;Now that I have the TinyBX mounted and connected the time has come to get some gateware going. After some research I settled on &lt;a href=&#34;https://github.com/nmigen/nmigen&#34;&gt;nMigen&lt;/a&gt;. It is constant development and &lt;a href=&#34;https://m-labs.hk&#34;&gt;m-labs&lt;/a&gt; is working hard to get it running. There is a repository of my &lt;a href=&#34;https:/github.com/zignig/gizmotron&#34;&gt;code&lt;/a&gt; as I develop it.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Steve part 4</title>
-      <link>https://zignig.github.io/posts/steve/steve.4/</link>
-      <pubDate>Tue, 21 May 2019 21:29:55 +0800</pubDate>
-      
-      <guid>https://zignig.github.io/posts/steve/steve.4/</guid>
-      <description>STEVE&amp;rsquo;s new look    orginal image   A 3.3V supply has been added to drive the TinyFPGA-BX and other 3.3V devices. Once the power supply was tuned (tiny multiturn pot) some nail polish was painted on the screw so it does not move. The 10V rail (8 AA , NiMH) has been covered with Kapton tape to avoid accidental shorts.
-There is also a 5&amp;lt;-&amp;gt;3.3V signal converter, so there are 8 lines that can be broken out to the other side of STEVE.</description>
-    </item>
-    
-    <item>
-      <title>Steve part 3</title>
-      <link>https://zignig.github.io/posts/steve/steve.3/</link>
-      <pubDate>Wed, 24 Apr 2019 06:48:22 +0800</pubDate>
-      
-      <guid>https://zignig.github.io/posts/steve/steve.3/</guid>
-      <description>&lt;h3 id=&#34;the-compass-digital-hmc6352&#34;&gt;The compass (digital) HMC6352&lt;/h3&gt;
-&lt;p&gt;Finding a path forward.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Steve part 2</title>
-      <link>https://zignig.github.io/posts/steve/steve.2/</link>
-      <pubDate>Mon, 22 Apr 2019 11:24:57 +0800</pubDate>
-      
-      <guid>https://zignig.github.io/posts/steve/steve.2/</guid>
-      <description>Neatness I have finished moving the ardino across to the perfboard , apart for an unexpected short it is working.
-   orginal image     orginal image  
-Now for compass integration and rewriting the software to have much more nuanced control. I will need to break out the current probes on the motor controller to get the drive chopping properly.</description>
-    </item>
-    
-    <item>
-      <title>Steve part 1</title>
-      <link>https://zignig.github.io/posts/steve/steve.1/</link>
-      <pubDate>Mon, 22 Apr 2019 08:02:39 +0800</pubDate>
-      
-      <guid>https://zignig.github.io/posts/steve/steve.1/</guid>
-      <description>&lt;p&gt;STEVE is brake steer rover.&lt;/p&gt;
-&lt;p&gt;It is based on the Tamiya tracked chassis.&lt;/p&gt;</description>
     </item>
     
     <item>

@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Semidigital Meta Adventures</title>
-    <link>https://zignig.github.io/</link>
+    <link>https://zignig.github.io/posts/steve/</link>
     <description>Recent content on Semidigital Meta Adventures</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Sun, 18 Dec 2022 09:08:35 +0800</lastBuildDate>
     
-	<atom:link href="https://zignig.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://zignig.github.io/posts/steve/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -21,35 +21,6 @@
     </item>
     
     <item>
-      <title>SPORK!</title>
-      <link>https://zignig.github.io/posts/spork/</link>
-      <pubDate>Sat, 06 Mar 2021 07:06:47 +0800</pubDate>
-      
-      <guid>https://zignig.github.io/posts/spork/</guid>
-      <description>&lt;h1 id=&#34;build-a-boneless-soc&#34;&gt;Build a Boneless SOC&lt;/h1&gt;
-&lt;p&gt;A little cpu and the things that you need on a FPGA&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Powerlines</title>
-      <link>https://zignig.github.io/posts/powerlines/</link>
-      <pubDate>Tue, 12 May 2020 11:41:00 +0800</pubDate>
-      
-      <guid>https://zignig.github.io/posts/powerlines/</guid>
-      <description>&lt;p&gt;Some power lines&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Absent</title>
-      <link>https://zignig.github.io/posts/info/absent/</link>
-      <pubDate>Sun, 15 Mar 2020 13:13:50 +0800</pubDate>
-      
-      <guid>https://zignig.github.io/posts/info/absent/</guid>
-      <description>This blog has been sorely negelected. My intent over next few decades is to catch up on my progress.
-;)</description>
-    </item>
-    
-    <item>
       <title>New Boneless-v3 and the Gizmotron</title>
       <link>https://zignig.github.io/posts/steve/steve.7/</link>
       <pubDate>Sat, 03 Aug 2019 08:46:36 +0800</pubDate>
@@ -57,25 +28,6 @@
       <guid>https://zignig.github.io/posts/steve/steve.7/</guid>
       <description>Working Boneless v3 Finally managed to get the new version of the processor running on my TinyBx this is in concert with nmigen , nmigen-boards and Boneless v3. I have wrapped all this into my workbench for the project in Gizmotron
 Gizmos from .gizmo import Gizmo, IO from nmigen import * class _warmboot(Elaboratable): def __init__(self): self.image = Signal(2) self.boot = Signal() def elaborate(self, platform): m = Module() m.submodules.wb = Instance(&amp;#34;SB_WARMBOOT&amp;#34;, i_S1 = self.</description>
-    </item>
-    
-    <item>
-      <title>Feline OverDomesticus</title>
-      <link>https://zignig.github.io/drawing/cat/</link>
-      <pubDate>Wed, 24 Jul 2019 15:39:46 +0930</pubDate>
-      
-      <guid>https://zignig.github.io/drawing/cat/</guid>
-      <description>   orginal image   </description>
-    </item>
-    
-    <item>
-      <title>Alien Space Dino</title>
-      <link>https://zignig.github.io/drawing/dino/</link>
-      <pubDate>Mon, 15 Jul 2019 10:47:52 +0930</pubDate>
-      
-      <guid>https://zignig.github.io/drawing/dino/</guid>
-      <description>An alien space dino   orginal image   Twisty and Chonky Crayon on Cartridge , A3.
-SGK20190713</description>
     </item>
     
     <item>
@@ -136,49 +88,6 @@ Now for compass integration and rewriting the software to have much more nuanced
       <guid>https://zignig.github.io/posts/steve/steve.1/</guid>
       <description>&lt;p&gt;STEVE is brake steer rover.&lt;/p&gt;
 &lt;p&gt;It is based on the Tamiya tracked chassis.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Infrastructure</title>
-      <link>https://zignig.github.io/investigation/infrastructre/</link>
-      <pubDate>Sun, 21 Apr 2019 11:39:11 +0800</pubDate>
-      
-      <guid>https://zignig.github.io/investigation/infrastructre/</guid>
-      <description>Software and services that help instead of getting in the way One of the things that crops up again and again is that computers do what you told them to, not what you meant.
-SO ANNOYING </description>
-    </item>
-    
-    <item>
-      <title>Boneless</title>
-      <link>https://zignig.github.io/investigation/boneless/</link>
-      <pubDate>Fri, 19 Apr 2019 20:07:38 +0800</pubDate>
-      
-      <guid>https://zignig.github.io/investigation/boneless/</guid>
-      <description>&lt;h2 id=&#34;a-gateware-cpu&#34;&gt;A gateware CPU&lt;/h2&gt;
-&lt;p&gt;The &lt;a href=&#34;https://github.com/zignig/Boneless-CPU&#34;&gt;Boneless-CPU&lt;/a&gt; is a soft CPU written in &lt;a href=&#34;https://github.com/m-labs/nmigen&#34;&gt;nmigen&lt;/a&gt; by &lt;a href=&#34;https://github.com/whitequark&#34;&gt;Whitequark&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;It is a 16bit Von Neumann machine with a completely flat memory space , registers and all. The gateware is nice and compact and fits into about 500 LUTS plus memory.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>FPGA</title>
-      <link>https://zignig.github.io/posts/fpga/</link>
-      <pubDate>Fri, 19 Apr 2019 08:55:07 +0800</pubDate>
-      
-      <guid>https://zignig.github.io/posts/fpga/</guid>
-      <description>&lt;h1 id=&#34;fpga-fun&#34;&gt;FPGA fun&lt;/h1&gt;
-&lt;p&gt;I recently aquired a TinyFpgaBX and have been investigating programming RTL.&lt;/p&gt;
-&lt;p&gt;After doing regular programming , thinking in gateware is a brain melter.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>CQparts</title>
-      <link>https://zignig.github.io/investigation/cqparts/</link>
-      <pubDate>Fri, 19 Apr 2019 08:14:03 +0800</pubDate>
-      
-      <guid>https://zignig.github.io/investigation/cqparts/</guid>
-      <description>Build tangible programmatic designs in python. It is similar in form to OpenScad where you can define 3d objects with code, however it is python and brings all the power of OO to building objects. You can make paramteric object that are an assembly of parts, this is one of my examples for a little project box
-[] (https://cqparts.github.io/examples/export/showcase/ProjectBox/)
-It can also generate gltf format files and display them with ThreeJS</description>
     </item>
     
   </channel>
