@@ -2,7 +2,7 @@
 <html class="" lang="en-US">
 
 <head>
-    <meta name="generator" content="Hugo 0.55.3" />
+    <meta name="generator" content="Hugo 0.68.3" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -117,25 +117,18 @@
 
                     <hr>
                     <p>Finally managed to get TX working on the gateware uart, RX is next. Having a UART means that it can talk to the outside world.</p>
-
 <p>Once I have RX working, the following tasks will need to be built.</p>
-
 <ul>
 <li>Echo Program , make sure char in and char out works</li>
 <li>Scratch Pad , collect char into a ram buffer for parsing</li>
 <li>Monitor, <em>This</em> is basis for the whole system , loading and executing a new program without rebuilding the gateware.</li>
 <li>FORTH , yes build a forth in assembly.</li>
 </ul>
-
-<h1 id="aaaaaand-boneless-v3-has-started-to-drop">Aaaaaand , Boneless_v3 has started to drop.</h1>
-
+<h1 id="aaaaaand--boneless_v3-has-started-to-drop">Aaaaaand , Boneless_v3 has started to drop.</h1>
 <p><a href="https://twitter.com/whitequark">Whitequark</a> has been committing to <a href="https://github.com/whitequark/Boneless-CPU">Boneless-CPU</a>. It&rsquo;s an ongoing process as Ve details the individual instructions.
 The design is a much better instruction set with extended version of all the instructions.</p>
-
 <p>Now I have to rewrite all my ASM code so far. Part of the adventure I suspect. Currently (20190713) working on getting v3 into gateware will know later today if it works.</p>
-
 <h1 id="working-blinky">Working Blinky</h1>
-
 <p>I have working blinky now, now time for the serial bootloader</p>
                 <div class="is-clearfix"></div>
                 <hr>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>gateware on Semidigital Meta Adventures</title>
@@ -28,9 +28,7 @@ Gizmos from .gizmo import Gizmo, IO from nmigen import * class _warmboot(Elabora
       
       <guid>https://zignig.github.io/investigation/boneless/</guid>
       <description>&lt;h2 id=&#34;a-gateware-cpu&#34;&gt;A gateware CPU&lt;/h2&gt;
-
 &lt;p&gt;The &lt;a href=&#34;https://github.com/zignig/Boneless-CPU&#34;&gt;Boneless-CPU&lt;/a&gt; is a soft CPU written in &lt;a href=&#34;https://github.com/m-labs/nmigen&#34;&gt;nmigen&lt;/a&gt; by &lt;a href=&#34;https://github.com/whitequark&#34;&gt;Whitequark&lt;/a&gt;.&lt;/p&gt;
-
 &lt;p&gt;It is a 16bit Von Neumann machine with a completely flat memory space , registers and all. The gateware is nice and compact and fits into about 500 LUTS plus memory.&lt;/p&gt;</description>
     </item>
     
@@ -41,9 +39,7 @@ Gizmos from .gizmo import Gizmo, IO from nmigen import * class _warmboot(Elabora
       
       <guid>https://zignig.github.io/posts/fpga/</guid>
       <description>&lt;h1 id=&#34;fpga-fun&#34;&gt;FPGA fun&lt;/h1&gt;
-
 &lt;p&gt;I recently aquired a TinyFpgaBX and have been investigating programming RTL.&lt;/p&gt;
-
 &lt;p&gt;After doing regular programming , thinking in gateware is a brain melter.&lt;/p&gt;</description>
     </item>
     

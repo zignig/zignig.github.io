@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html class="" lang="en-US">
+
+<head>
+    <meta name="generator" content="Hugo 0.68.3" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Steve part 8 | Semidigital Meta Adventures</title>
+
+    
+    <meta name="description" content="Resurrection of STEVE, tank bot rises again.">  
+      
+    
+    
+    
+    
+     
+    
+    
+    <link rel="canonical" href="https://zignig.github.io/posts/steve/steve.8/">   
+
+    <link rel="stylesheet" href="/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    
+    <link rel="stylesheet" href="/css/bulma.css"> 
+    <link rel="stylesheet" href="/css/landing.css">   
+    
+    
+    <script src="/js/skins/default.js" type="text/javascript"></script>
+    <script src="/js/wavedrom.min.js" type="text/javascript"></script>
+</head>
+
+
+<body onload="WaveDrom.ProcessAll()">
+    <header> <nav class="navbar is-transparent">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+        <p class="title">Zignig</p>
+    </a>
+    <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  
+  <div class="navbar-menu">
+    <div class="navbar-start">
+      
+      <a class="navbar-item" target="blank" href="https://github.com/zignig">
+        <span class="icon">
+          <i class="fa fa-github"></i>
+        </span>
+      </a>
+      
+    </div>
+    
+    
+    
+    <span class="navbar-burger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </span>
+    
+    
+    
+    <div class="navbar-end">
+      <div class="navbar-item">
+        
+        
+          <a itemprop="url" class="navbar-item " href="/drawing/"><span itemprop="name">Drawings</span></a>
+        
+          <a itemprop="url" class="navbar-item " href="/investigation/"><span itemprop="name">Investigations</span></a>
+        
+          <a itemprop="url" class="navbar-item  is-active" href="/posts/"><span itemprop="name">Posts</span></a>
+        
+      </div> 
+    </div>
+  </div>
+</nav>
+ </header>
+    <main>
+
+<div class="columns is-fullheight">
+    <div class="column">
+        <section class="hero is-default is-bold">
+            <div class="hero-body">
+                <div class="content container">
+                    <div class="is-size-1" >Steve part 8</div>
+		    <b>Resurrection of STEVE, tank bot rises again.</b>
+                    <br><br>
+                    <div class="is-size-7">Dec 2022</div>
+                    <div class="tags is-right">
+
+    <span class="tag is-tiny is-white"><a href="/tags/steve">steve</a></span>
+
+    <span class="tag is-tiny is-white"><a href="/tags/esp32">esp32</a></span>
+
+    <span class="tag is-tiny is-white"><a href="/tags/rust">rust</a></span>
+
+</div>
+
+                    <div class="level">
+    <div class="level-left">
+         
+        <span class="icon"><i class="mdi mdi-24px mdi-chevron-left"></i></span>
+        <a href="https://zignig.github.io/posts/spork/">SPORK! </a>
+        
+    </div>
+    <div class="level-right">
+        
+    </div>
+</div>
+
+                    <hr>
+                    <h1 id="the-resurrection-of-steve">The Resurrection of Steve</h1>
+<p>Steve has been collecting dust for some time in my workshop. Over the last year I have replaced the TinyBX controller with an <a href="https://www.jaycar.com.au/esp32-main-board-with-wifi-and-bluetooth-communication/p/XC3800">esp32</a> and replaced the level converter with a simpler stable  <a href="https://www.jaycar.com.au/arduino-compatible-logic-level-converter-module/p/XC4486?pos=1&amp;queryId=c5e56887feec3eb3871facaa052d544d">level converter</a>.</p>
+<p>I have been spending some of my shed time fixing TODO and making sure that there is progression across all systems. I managed to finally get feature parity on the rust firmware last night (20221218) and impressed the kids by driving it around with the web interface on my mobile phone.</p>
+<h2 id="speed-bumps-along-this-update">Speed bumps along this update</h2>
+<ul>
+<li>Found and eliminated two shorts on the main board</li>
+<li>Replaced the gearbox (wearing out)</li>
+<li>Replaced the power switch , had dry solder connection.</li>
+<li>Rewrote the arduino code in <a href="https://www.rust-lang.org">Rust</a></li>
+</ul>
+<p>I endeavor to learn a new programming language every few years and force myself to investigate and discover something different. It is good to get the brain juices flowing and find myself in the uncomfortable position of not understanding how to do things. In this case I am learning Rust and it has become obvious why many people wax lyrical about it. It takes a while to get up to speed but once you grok, it rocks.</p>
+<p>The full code for <a href="https://github.com/zignig/steves_brain/">STEVE</a> has been published (finally) and I will be updating it as development continues.</p>
+<h2 id="better-interface">Better interface</h2>
+<p>The move across to the esp32 running <a href="https://micropython.org/">micropython</a> gave me access to a whole suite of libraries and code from the web and straight forward access to my wireless network for debugging an updates. This has made development and testing so much easier.</p>
+<h1 id="web-interface">Web Interface</h1>
+<p>I have found and coerced a <a href="https://www.instructables.com/Wifi-PPM-no-App-Needed/">web interface</a> to my will for steve. The esp32 provides a web server that serves up these pages and web socket for data transfer.</p>
+<h2 id="web-interface-1">Web interface</h2>
+<p>Landing page</p>
+
+
+
+
+    <figure class="is-pulled-left">
+    <a href="/posts/steve/steve.8/interface_main_huc851deecc9ea5c71704c222383882f78_115054_1024x0_resize_box_2.png">
+        <img style="max-width:100% height:auto" src="/posts/steve/steve.8/interface_main_huc851deecc9ea5c71704c222383882f78_115054_300x0_resize_box_2.png" width="300" height="138"></img>
+    </a>
+    <figcaption><a class="is-small" href="/posts/steve/steve.8/interface_main.png">orginal image</a></figcation>
+    </figure>
+<div class="is-clearfix"></div>
+<p>Controller page</p>
+
+
+
+
+    <figure class="is-pulled-left">
+    <a href="/posts/steve/steve.8/interface_control_hu9e2ce50b002f16bebaddff3dd9f9d1fc_434006_1024x0_resize_box_2.png">
+        <img style="max-width:100% height:auto" src="/posts/steve/steve.8/interface_control_hu9e2ce50b002f16bebaddff3dd9f9d1fc_434006_300x0_resize_box_2.png" width="300" height="138"></img>
+    </a>
+    <figcaption><a class="is-small" href="/posts/steve/steve.8/interface_control.png">orginal image</a></figcation>
+    </figure>
+<div class="is-clearfix"></div>
+<p>The right hand joystick will control the differential drive and motivate steve in the correct(ish) direction. This module need a lot of tuning to make it more usable.</p>
+<h2 id="telnet-interface">Telnet interface</h2>
+<p>There is an optional telnet interface (insecure, I know) that gives access to the micropython console. For development this has been invaluable.</p>
+<p>Currently I am working on cleaning out the git workspace and cleaning up the documentation. Photographs of steve to follow.</p>
+<p>Psssht OUT.</p>
+
+                <div class="is-clearfix"></div>
+                <hr>
+                <div class="level">
+    <div class="level-left">
+         
+        <span class="icon"><i class="mdi mdi-24px mdi-chevron-left"></i></span>
+        <a href="https://zignig.github.io/posts/spork/">SPORK! </a>
+        
+    </div>
+    <div class="level-right">
+        
+    </div>
+</div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+</main>
+    <footer> 
+  <footer class="footer">
+        <div class="content has-text-centered">
+                <a href="https://github.com/zignig">GITHUB</a>
+                <br>
+                
+                Additional power is provided by
+                  <strong>caffine</strong>.
+                
+                
+        </div>
+</footer>
+ 
+</footer>
+
+    <script async type="text/javascript" src="/js/bulma.js"></script>
+    <script async type="text/javascript"  src="/js/clipboard.min.js"></script>
+    <script async type="text/javascript"  src="/js/clip.js"></script>
+</body>
+
+</html>

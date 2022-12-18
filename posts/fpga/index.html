@@ -2,7 +2,7 @@
 <html class="" lang="en-US">
 
 <head>
-    <meta name="generator" content="Hugo 0.55.3" />
+    <meta name="generator" content="Hugo 0.68.3" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -114,35 +114,22 @@
 
                     <hr>
                     <h1 id="fpga-fun">FPGA fun</h1>
-
 <p>I recently aquired a TinyFpgaBX and have been investigating programming RTL.</p>
-
 <p>After doing regular programming , thinking in gateware is a brain melter.</p>
-
 <h2 id="tinyfpga-bx">TinyFPGA-BX</h2>
-
-<p><img src="/img/TinyFPGA-BX.png" alt="TinyFPGA-BX" /></p>
-
+<p><img src="/img/TinyFPGA-BX.png" alt="TinyFPGA-BX"></p>
 <p>Is a nifty little breadboard friendly board (<a href="https://tinyfpga.com/">website</a>), this board has been designed by <a href="https://github.com/tinyfpga">Luke Valenty</a> and is a great little board to get started with FPGA programming.</p>
-
 <p>A forum for development and troubleshooting is avalable <a href="https://discourse.tinyfgpa.com">here</a></p>
-
 <h3 id="building-reconfigurable-logic">Building reconfigurable logic</h3>
-
 <p>Historically the tooling needed to program FPGA has been vendor specific, the software has been huge, buggy, not portable and a usually windows only. Across the last few years there has been a renaissance for this technology. The prices have come down to hobby levels and a complete opensource tool chain has been built and the development is accelerating.</p>
-
 <h3 id="structural-software">Structural Software</h3>
-
 <ul>
 <li><a href="https://github.com/YosysHQ/yosys">Yosys</a> - takes verilog and turns it into register transfer logic</li>
 <li><a href="https://github.com/YosysHQ/nextpnr">nextpnr</a> - takes the logic and maps it onto a device image</li>
 <li><a href="http://github.com/cliffordwolf/icestorm">icestorm</a> - takes the image and packages up for transport onto the FPGA</li>
 </ul>
-
 <p>With these programs it is possbile to design, build and test verilog programs on an FPGA that is totally opensource.</p>
-
-<hr />
-
+<hr>
 <h3 id="infrastructure-software">Infrastructure Software</h3>
                 <div class="is-clearfix"></div>
                 <hr>

@@ -2,7 +2,7 @@
 <html class="" lang="en-US">
 
 <head>
-    <meta name="generator" content="Hugo 0.55.3" />
+    <meta name="generator" content="Hugo 0.68.3" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -119,25 +119,15 @@
 
                     <hr>
                     <h1 id="mmmm-brains">mmmm BRAINS</h1>
-
 <p>Now that I have the TinyBX mounted and connected the time has come to get some gateware going. After some research I settled on <a href="https://github.com/nmigen/nmigen">nMigen</a>. It is constant development and <a href="https://m-labs.hk">m-labs</a> is working hard to get it running. There is a repository of my <a href="https:/github.com/zignig/gizmotron">code</a> as I develop it.</p>
-
 <h2 id="boneless-cpu">Boneless CPU</h2>
-
 <p>The basis for STEVE&rsquo;s brain is going to be a <a href="/investigation/boneless">Boneless</a> cpu. My current battle is getting a serial port attached to a running CPU so updating and loading software does not require a recompile of the gateware.</p>
-
 <h3 id="gizmos">Gizmos</h3>
-
 <p>Modularity is always an important part of software development. With nMigen giving you access to pythonic encapsulation there are some interesting forms that can be made with gateware. See <a href="https://github.com/zignig/gizmotron/blob/master/cores/gizmo.py">here</a> , this construct makes it possible to attach gateware into the CPU and map into the memory space with minimal effort.</p>
-
 <p>I have moved my experimental code into a new home on github <a href="https://github.com/zignig/gizmotron">gizmotron</a>. This will attempt to be a generic Boneless-CPU framework that I can use for STEVE going forwards.</p>
-
 <p>My primary  target is the tinyfpga-bx , however with the <a href="https://github.com/m-labs/nmigen-boards">nmigen-boards</a> system , porting this to a new fpga should be straight forward.</p>
-
-<p><img src="/img/TinyFPGA-BX.png" alt="TinyFPGA-BX" /></p>
-
+<p><img src="/img/TinyFPGA-BX.png" alt="TinyFPGA-BX"></p>
 <p>The idea of a gizmo is that you can take an gizmo class extend it  bind it directly to the Boneless-CPU external IO. An example to bind all the userleds to a single register is shown below.</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-py3" data-lang="py3"><span class="kn">import</span> <span class="nn">itertools</span>
 
 <span class="kn">from</span> <span class="nn">nmigen.build</span> <span class="k">import</span> <span class="n">Resource</span><span class="p">,</span> <span class="n">Subsignal</span><span class="p">,</span> <span class="n">Pins</span>
@@ -163,9 +153,7 @@
         <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">leds</span><span class="p">):</span>
             <span class="n">o</span><span class="o">.</span><span class="n">add_bit</span><span class="p">(</span><span class="n">BIT</span><span class="p">(</span><span class="s2">&#34;led_&#34;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">i</span><span class="p">))</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">add_reg</span><span class="p">(</span><span class="n">o</span><span class="p">)</span></code></pre></div>
-
 <p>It is also possible to include and Elaboratable into a gizmo</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-py3" data-lang="py3"><span class="kn">from</span> <span class="nn">.gizmo</span> <span class="k">import</span> <span class="n">Gizmo</span><span class="p">,</span> <span class="n">IO</span>
 <span class="kn">from</span> <span class="nn">nmigen</span> <span class="k">import</span> <span class="o">*</span>
 
@@ -186,9 +174,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">add_device</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
         <span class="n">s</span> <span class="o">=</span> <span class="n">IO</span><span class="p">(</span><span class="n">sig_in</span><span class="o">=</span><span class="n">c</span><span class="o">.</span><span class="n">counter</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&#34;counter&#34;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">add_reg</span><span class="p">(</span><span class="n">s</span><span class="p">)</span></code></pre></div>
-
 <p>This counter is now attached to the cpu , how this is accessed is still in development , but I think that this provides a simple and modular way to add gateware to the boneless cpu.</p>
-
 <p>Investigations continue &hellip;</p>
                 <div class="is-clearfix"></div>
                 <hr>

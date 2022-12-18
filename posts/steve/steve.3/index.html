@@ -2,7 +2,7 @@
 <html class="" lang="en-US">
 
 <head>
-    <meta name="generator" content="Hugo 0.55.3" />
+    <meta name="generator" content="Hugo 0.68.3" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -115,82 +115,59 @@
 
                     <hr>
                     <h3 id="the-compass-digital-hmc6352">The compass (digital) HMC6352</h3>
-
 <p>Finding a path forward.</p>
-
 <p>Having an absolute (within reason) bearing makes navigation significantly easier. When you command the bot to rotate 90 degrees you can actually measure it. This is a spark fun <a href="https://www.sparkfun.com/products/retired/7915">module</a>, retired. The datasheet is <a href="HMC6352.pdf">here</a></p>
 
 
 
 
-
+    <figure class="is-pulled-left">
+    <a href="/posts/steve/steve.3/compass_hmc6352_hu3ccb533a2854f190e3393510795539c7_124803_1024x0_resize_q90_box.JPG">
+        <img style="max-width:100% height:auto" src="/posts/steve/steve.3/compass_hmc6352_hu3ccb533a2854f190e3393510795539c7_124803_300x0_resize_q90_box.JPG" width="300" height="303"></img>
+    </a>
+    <figcaption><a class="is-small" href="/posts/steve/steve.3/compass_hmc6352.JPG">orginal image</a></figcation>
+    </figure>
 <div class="is-clearfix"></div>
-<figure class="is-pulled-left">
-<a href="/posts/steve/steve.3/compass_hmc6352_hu3ccb533a2854f190e3393510795539c7_124803_1024x0_resize_q90_box.JPG">
-    <img style="max-width=100% height=auto" src="/posts/steve/steve.3/compass_hmc6352_hu3ccb533a2854f190e3393510795539c7_124803_300x0_resize_q90_box.JPG" width="300" height="303"></img>
-</a>
-<figcaption><a class="is-small" href="/posts/steve/steve.3/compass_hmc6352.JPG">orginal image</a></figcation>
-</figure>
-
-
 <h1 id="motor-controller">Motor Controller</h1>
-
 <p>I have moved the arduino for motor control onto the perfboard and cleaned up the wiring.</p>
-
 <p>The battery pack needs some attention , 4 AAs providing 6V is workable for testing. However going forward it will need to be rechargeable (with the possiblility of steve recharging himself)</p>
-
 <p>STEVE is looking neater and I have broken out six more pins up to the top level so I can experiment with the current sensing on the H-BRIDGE controller.</p>
 
 
 
 
-
+    <figure class="is-pulled-left">
+    <a href="/posts/steve/steve.3/IMG_1201_hu7b03303ea66bcbdca0617abc73d5d2cf_3877859_1024x0_resize_q90_box.JPG">
+        <img style="max-width:100% height:auto" src="/posts/steve/steve.3/IMG_1201_hu7b03303ea66bcbdca0617abc73d5d2cf_3877859_300x0_resize_q90_box.JPG" width="300" height="225"></img>
+    </a>
+    <figcaption><a class="is-small" href="/posts/steve/steve.3/IMG_1201.JPG">orginal image</a></figcation>
+    </figure>
 <div class="is-clearfix"></div>
-<figure class="is-pulled-left">
-<a href="/posts/steve/steve.3/IMG_1201_hu7b03303ea66bcbdca0617abc73d5d2cf_3877859_1024x0_resize_q90_box.JPG">
-    <img style="max-width=100% height=auto" src="/posts/steve/steve.3/IMG_1201_hu7b03303ea66bcbdca0617abc73d5d2cf_3877859_300x0_resize_q90_box.JPG" width="300" height="225"></img>
-</a>
-<figcaption><a class="is-small" href="/posts/steve/steve.3/IMG_1201.JPG">orginal image</a></figcation>
-</figure>
 
 
 
 
-
-
+    <figure class="is-pulled-left">
+    <a href="/posts/steve/steve.3/dodj_remote_hu7b03303ea66bcbdca0617abc73d5d2cf_4252007_1024x0_resize_q90_box.JPG">
+        <img style="max-width:100% height:auto" src="/posts/steve/steve.3/dodj_remote_hu7b03303ea66bcbdca0617abc73d5d2cf_4252007_300x0_resize_q90_box.JPG" width="300" height="225"></img>
+    </a>
+    <figcaption><a class="is-small" href="/posts/steve/steve.3/dodj_remote.JPG">orginal image</a></figcation>
+    </figure>
 <div class="is-clearfix"></div>
-<figure class="is-pulled-left">
-<a href="/posts/steve/steve.3/dodj_remote_hu7b03303ea66bcbdca0617abc73d5d2cf_4252007_1024x0_resize_q90_box.JPG">
-    <img style="max-width=100% height=auto" src="/posts/steve/steve.3/dodj_remote_hu7b03303ea66bcbdca0617abc73d5d2cf_4252007_300x0_resize_q90_box.JPG" width="300" height="225"></img>
-</a>
-<figcaption><a class="is-small" href="/posts/steve/steve.3/dodj_remote.JPG">orginal image</a></figcation>
-</figure>
-
-
 <p>This is the <em>dodgy</em> remote used to control the H-Bridge contoller directly.</p>
-
 <h1 id="differential-control-and-navigation">Differential control and navigation.</h1>
-
 <p>The outputs on the H-bridge are two speeds (8bits) and direction (1 bit each). The inputs will be compass heading and current used on each channel. It would also be an advantage to be able to measure the motor rotation, however on a brake steer platform the rotation compared to posistion will vary considerably. A photo interrupter or hall effect sensors to measure. I will have to manage the available ports on the Arduino carefully.</p>
-
 <p>The external interface to the drive system will have three variables.</p>
-
 <ul>
 <li>Direction ( absolute magentic bearing ), measured by the compass.</li>
 <li>Speed, this will need to be ramped up and down to limit the current draw.</li>
 <li>Distance, measured from the motor rotation.</li>
 </ul>
-
 <p>All three of the values should be piped through a PID controller of some kind to smooth and provide a closed loop. As the battery runs down the speed posted compared to the actual speed varies wildly.</p>
-
 <h2 id="arduino-pro-mini">Arduino Pro Mini</h2>
-
 <p>Pinout image</p>
-
-<p><img src="ProMini8MHzv1.jpg" alt="nano layout" /></p>
-
+<p><img src="ProMini8MHzv1.jpg" alt="nano layout"></p>
 <p>I moved the enable pin for the left drive from pin 10 to pin 3 so SS is freed up. The intent is to have the ProMini as an SPI slave from the TinyBX.</p>
-
 <p>The compass still works I found an example sketch for the internet, <a href="https://github.com/zignig/tinybx_stuff/blob/master/STEVE/drive/compass/compass.ino">code</a>. When I was testing I was getting weird readings as I was rotating the bot. It turned out that there was a stack of Rare Earth magnets in my bits draw right behind it (whoops).</p>
                 <div class="is-clearfix"></div>
                 <hr>

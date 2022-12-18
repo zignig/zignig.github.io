@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>fpga on Semidigital Meta Adventures</title>
@@ -18,9 +18,7 @@
       
       <guid>https://zignig.github.io/posts/fpga/</guid>
       <description>&lt;h1 id=&#34;fpga-fun&#34;&gt;FPGA fun&lt;/h1&gt;
-
 &lt;p&gt;I recently aquired a TinyFpgaBX and have been investigating programming RTL.&lt;/p&gt;
-
 &lt;p&gt;After doing regular programming , thinking in gateware is a brain melter.&lt;/p&gt;</description>
     </item>
     

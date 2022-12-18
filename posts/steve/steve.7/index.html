@@ -2,7 +2,7 @@
 <html class="" lang="en-US">
 
 <head>
-    <meta name="generator" content="Hugo 0.55.3" />
+    <meta name="generator" content="Hugo 0.68.3" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -116,14 +116,9 @@
 </div>
 
                     <hr>
-                    
-
-<h1 id="working-boneless-v3">Working Boneless v3</h1>
-
+                    <h1 id="working-boneless-v3">Working Boneless v3</h1>
 <p>Finally managed to get the new version of the processor running on my <a href="https://tinyfpga.com">TinyBx</a> this is in concert with <a href="https://github.com/m-labs/nmigen">nmigen</a> , <a href="https://github.com/m-labs/nmigen-boards">nmigen-boards</a> and <a href="https://github.com/WhiteQuark/Boneless-CPU">Boneless v3</a>. I have wrapped all this into my workbench for the project in <a href="https://github.com/zignig/gizmotron">Gizmotron</a></p>
-
 <h1 id="gizmos">Gizmos</h1>
-
 <div class="highlight"><pre class="chroma"><code class="language-py3" data-lang="py3"><span class="kn">from</span> <span class="nn">.gizmo</span> <span class="k">import</span> <span class="n">Gizmo</span><span class="p">,</span> <span class="n">IO</span>
 <span class="kn">from</span> <span class="nn">nmigen</span> <span class="k">import</span> <span class="o">*</span>
 
@@ -151,9 +146,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">add_reg</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
         <span class="n">s</span> <span class="o">=</span> <span class="n">IO</span><span class="p">(</span><span class="n">sig_out</span><span class="o">=</span><span class="n">w</span><span class="o">.</span><span class="n">boot</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&#34;boot&#34;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">add_reg</span><span class="p">(</span><span class="n">s</span><span class="p">)</span></code></pre></div>
-
 <p>This then can be used from inside the processor</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-asm" data-lang="asm"><span class="nl">warmboot:</span>
     <span class="nf">MOVI</span> <span class="no">R0</span><span class="p">,</span><span class="mi">0</span>                   <span class="c">; set boot image to 0
 </span><span class="c"></span>    <span class="no">STXA</span> <span class="no">R0</span><span class="p">,</span><span class="no">image</span>               <span class="c">; write to the image external register
